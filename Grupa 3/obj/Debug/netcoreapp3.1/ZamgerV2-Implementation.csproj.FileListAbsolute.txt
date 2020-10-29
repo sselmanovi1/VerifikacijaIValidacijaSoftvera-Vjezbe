@@ -1,0 +1,8 @@
+D:\D\Ehlimana\Documents\VVS\Zadaća br. 1 (Inspekcija Koda)\Grupa 3\obj\Debug\netcoreapp3.1\ZamgerV2-Implementation.csprojAssemblyReference.cache
+D:\D\Ehlimana\Documents\VVS\Zadaća br. 1 (Inspekcija Koda)\Grupa 3\obj\Debug\netcoreapp3.1\staticwebassets\ZamgerV2-Implementation.StaticWebAssets.Manifest.cache
+D:\D\Ehlimana\Documents\VVS\Zadaća br. 1 (Inspekcija Koda)\Grupa 3\obj\Debug\netcoreapp3.1\staticwebassets\ZamgerV2-Implementation.StaticWebAssets.xml
+D:\D\Ehlimana\Documents\VVS\Zadaća br. 1 (Inspekcija Koda)\Grupa 3\obj\Debug\netcoreapp3.1\ZamgerV2-Implementation.MvcApplicationPartsAssemblyInfo.cache
+D:\D\Ehlimana\Documents\VVS\Zadaća br. 1 (Inspekcija Koda)\Grupa 3\obj\Debug\netcoreapp3.1\ZamgerV2-Implementation.RazorAssemblyInfo.cache
+D:\D\Ehlimana\Documents\VVS\Zadaća br. 1 (Inspekcija Koda)\Grupa 3\obj\Debug\netcoreapp3.1\ZamgerV2-Implementation.RazorAssemblyInfo.cs
+D:\D\Ehlimana\Documents\VVS\Zadaća br. 1 (Inspekcija Koda)\Grupa 3\obj\Debug\netcoreapp3.1\ZamgerV2-Implementation.AssemblyInfoInputs.cache
+D:\D\Ehlimana\Documents\VVS\Zadaća br. 1 (Inspekcija Koda)\Grupa 3\obj\Debug\netcoreapp3.1\ZamgerV2-Implementation.AssemblyInfo.cs
