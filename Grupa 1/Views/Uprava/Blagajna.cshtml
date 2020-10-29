@@ -1,0 +1,116 @@
+﻿@model StudentskiDom.Models.Student
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>blagajnaview</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrapBlagajnaLogin.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body style="background-color: rgb(248,250,252);">
+    <div class="container" style="margin: 60px 0px 0px 50px;">
+        <div class="row">
+            <div class="col">
+                <h1 style="color:black;font-family: COOPER;font-size: 82px;">BLAGAJNA</h1>
+            </div>
+            <div class="col" style="margin: 10px;">
+                <div class="row">
+                    <div class="col">
+                        <h3 class="text-right" style="color: black;font-family: Constantia;">Stanje budžeta</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <h1 class="text-right" style="color: black;font-family: Constantia;">@ViewBag.Blagajna.StanjeBudgeta</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @using (Html.BeginForm("ProvjeriID", "Uprava", FormMethod.Post))
+    {
+        <div class="row" style="margin: 40px 0px 0px 0px;">
+            <div class="col" style="width: 200px;"><label class="col-form-label text-right" style="font-size: 24px;width: 300px;color: rgb(30,129,228);margin: 10px 50px;">ID Studenta:</label></div>
+            <div class="col" style="width: 450px;"><input name="fldStudentId" class="border rounded" type="text" style="margin: 22px 0px;width: 350px;"></div>
+            <div class="col" style="width: 350px; "><button class="btn btn-primary" type="submit" style="margin: 18px 0px 0px 0px;width: 300px;">Provjeri ID</button></div>
+        </div>
+    }
+    @using (Html.BeginForm("UplatiMjesec", "Uprava", FormMethod.Post))
+    {
+        <div class="container" style="width: 1100px;">
+            <div class="row" style="width: 1100px;">
+                <div class="col" style="width:500px">
+                    <div class="table-responsive table-borderless text-center text-body" style="width: 450px;margin: 40px;">
+                        <table class="table table-bordered table-sm">
+                            <thead class="border-secondary" style="color: rgb(30,129,228);font-size: 17px;">
+                                <tr>
+                                    <th style="color: rgb(18,124,230);font-size: 17px;">Osnovni podaci</th>
+                                </tr>
+                            </thead>
+                            <tbody style="width: 500px;">
+                                <tr>
+                                    <td style="width: 200px;color: black;">Ime:</td>
+                                    <td>@ViewBag.Ime</td>
+                                </tr>
+                                <tr>
+                                    <td style="color: black;">Prezime:</td>
+                                    <td>@ViewBag.Prezime</td>
+                                </tr>
+                                <tr>
+                                    <td style="color: black;">Fakultet:</td>
+                                    <td>@ViewBag.Fakultet</td>
+                                </tr>
+                                <tr>
+                                    <td style="color: black;">Kanton:</td>
+                                    <td>@ViewBag.Kanton</td>
+                                </tr>
+                                <tr>
+                                    <td style="color: black;">Soba:</td>
+                                    <td>@ViewBag.Soba</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="col" style="width:500px">
+                    <div class="table-responsive table-borderless text-center text-body" style="width: 450px;margin: 40px;height: 209px;">
+                        <table class="table table-bordered table-sm">
+                            <thead class="border-secondary" style="color: rgb(30,129,228);font-size: 17px;">
+                                <tr>
+                                    <th style="color: rgb(18,124,230);font-size: 17px;">Neuplaćeni mjeseci</th>
+                                </tr>
+                            </thead>
+                            <tbody style="width: 500px;">
+                                <tr>
+                                    <td style="        width: 200px;
+        color: rgb(248,250,251);">
+                                        <select name="dlMjesec" style="width: 300px;margin-top: 20px;">
+                                            <optgroup label="Odaberite mjesec">
+                                                @foreach (Mjesec m in ViewBag.mjeseci)
+                                                {
+                                                    <option value=@m.MjesecId>@m.Naziv</option>
+                                                }
+                                            </optgroup>
+                                        </select>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="width: 500px; height: 50px; margin-right: 10px; margin-left: 600px;">
+            <div class="btn-group" role="group" style="margin-top: 10px;"><button class="btn btn-primary" type="submit" style="width: 248px; height: 38px;">Uplati dom za odabrani mjesec</button><button class="btn btn-primary" onclick="window.location.href='@Url.Action("Uprava", "Uprava", new { id = ViewBag.Blagajna.UpravaId })'" type="button" style="margin-left: 100px;height: 38px;">Gotovo</button></div>
+        </div>
+    }
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+<!DOCTYPE html>
+<html class="text-center">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>ViewCreating</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body class="text-center">
+    <h1 class="text-left" style="margin-top: 50px;margin-left: 200px;">Pregled zahtjeva</h1>
+    <ul class="list-group text-left bg-secondary border rounded border-dark" style="width: 800px;margin-top: 50px;margin-left: 200px;background-color: rgb(108,117,125);">
+        @foreach (var zahtjev in ViewBag.Zahtjevi)
+        {
+            <li class="list-group-item">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+
+
+                            @if (zahtjev is ZahtjevZaUpis)
+                            {
+                                var z = zahtjev as ZahtjevZaUpis;
+
+                                <h4 class="text-left">Zahtjev za upis</h4>
+                                <h5 class="text-left">@z.LicniPodaci.Prezime @z.LicniPodaci.Ime</h5>
+                            }
+                            else if (zahtjev is ZahtjevZaCimeraj)
+                            {
+                                var z = zahtjev as ZahtjevZaCimeraj;
+
+                                <h4 class="text-left">Zahtjev za cimeraj</h4>
+                                <h5 class="text-left">@z.Student.LicniPodaci.Prezime @z.Student.LicniPodaci.Ime</h5>
+                            }
+                            else if (zahtjev is ZahtjevZaPremjestanje)
+                            {
+                                var z = zahtjev as ZahtjevZaPremjestanje;
+
+                                <h4 class="text-left">Zahtjev za premještanje</h4>
+                                <h5 class="text-left">@z.Student.LicniPodaci.Prezime @z.Student.LicniPodaci.Ime</h5>
+                            }
+                            else if (zahtjev is ZahtjevZaNabavkuNamirnica)
+                            {
+                                var z = zahtjev as ZahtjevZaNabavkuNamirnica;
+
+                                <h4 class="text-left">Zahtjev za nabavku namirnica</h4>
+                                <h5 class="text-left">Restoran</h5>
+                            }
+
+                        </div>
+
+                        @if (zahtjev is ZahtjevZaUpis)
+                        {
+                            <div class="col text-right align-self-center"><button onclick="window.location.href='@Url.Action("PregledUpis","Zahtjev")?id=' + @((zahtjev as Zahtjev).ZahtjevId)" class="btn btn-primary" type="button" style="width: 200px;height: 50px;font-size: 20px;">Otvori zahtjev</button></div>
+                        }
+                        else if (zahtjev is ZahtjevZaCimeraj)
+                        {
+                            <div class="col text-right align-self-center"><button onclick="window.location.href='@Url.Action("PregledCimeraj","Zahtjev")?id=' + @((zahtjev as Zahtjev).ZahtjevId)" class="btn btn-primary" type="button" style="width: 200px;height: 50px;font-size: 20px;">Otvori zahtjev</button></div>
+                        }
+                        else if (zahtjev is ZahtjevZaPremjestanje)
+                        {
+                            <div class="col text-right align-self-center"><button onclick="window.location.href='@Url.Action("PregledPremjestanje","Zahtjev")?id=' + @((zahtjev as Zahtjev).ZahtjevId)" class="btn btn-primary" type="button" style="width: 200px;height: 50px;font-size: 20px;">Otvori zahtjev</button></div>
+                        }
+                        else if (zahtjev is ZahtjevZaNabavkuNamirnica)
+                        {
+                            <div class="col text-right align-self-center"><button onclick="window.location.href='@Url.Action("PregledNabavka","Zahtjev")?id=' + @((zahtjev as Zahtjev).ZahtjevId)" class="btn btn-primary" type="button" style="width: 200px;height: 50px;font-size: 20px;">Otvori zahtjev</button></div>
+                        }
+
+                    </div>
+                </div>
+            </li>
+        }
+    <li class="list-group-item">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="col text-center align-self-center"><button onclick="window.location.href='@Url.Action("Uprava", "Uprava", new { ViewBag.id })'" class="btn btn-primary border rounded" type="button" style="padding: 6px;margin: 15px;padding-left: 23;font-size: 20px; width: 200px;">Gotovo</button></div>
+                </div>
+            </div>
+        </div>
+    </li>
+    </ul>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>

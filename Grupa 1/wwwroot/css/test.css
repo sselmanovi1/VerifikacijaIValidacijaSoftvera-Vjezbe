@@ -1,0 +1,37 @@
+﻿body {
+    background-color: #000000;
+    background-image: linear-gradient(315deg, #000000 0%, #414141 74%);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Cooper;
+    text-align: center;
+    color: #f2f2f2;
+}
+
+.button {
+    box-shadow: 0px 10px 14px -7px #276873;
+    background: linear-gradient(to bottom, #18baf5 5%, #3799a8 100%);
+    background-color: #18baf5;
+    border-radius: 8px;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Cooper;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 13px 32px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #07aae0;
+    text-align:center;
+}
+
+    .button:hover {
+        background: linear-gradient(to bottom, #3799a8 5%, #18baf5 100%);
+        background-color: #3799a8;
+    }
+
+    .button:active {
+        position: relative;
+        top: 1px;
+    }

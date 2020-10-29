@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>restoranview</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body style="padding: 0px;">
+    @using (Html.BeginForm("ProvjeriID", "Restoran", FormMethod.Post))
+    {
+    <div style="width: 300px;height: 50px;margin: 50px 0px 0px 100px;">
+        <h1 style="font-family: cooper;font-size: 50px;">RESTORAN</h1>
+    </div>
+    <div class="border rounded border-primary d-xl-flex align-items-xl-start" style="width: 750px;height: 350px;margin: 30px 0px 0px 20px;">
+        <div class="container" style="width: 400px;margin: 50px 0px 0px 10px;">
+            <div class="row">
+                <div class="col"><label class="col-form-label">Ime</label></div>
+            </div>
+            <div class="row">
+                <div class="col"><label class="col-form-label text-center border rounded border-secondary" style="width: 300px;">@ViewBag.Ime</label></div>
+            </div>
+            <div class="row">
+                <div class="col"><label class="col-form-label">Prezime</label></div>
+            </div>
+            <div class="row">
+                <div class="col"><label class="col-form-label text-center border rounded border-secondary" style="width: 300px;">@ViewBag.Prezime</label></div>
+            </div>
+        </div>
+        <div class="container" style="width: 300px;margin: 30px 0px 0px 10px;">
+            <div class="row">
+                <div class="col" style="height: 140px;"><img src="~/images/@ViewBag.Slika" style="width: 240px;height: 140px;"></div>
+            </div>
+            <div class="row">
+                <div class="col" style="height: 80px;margin: 30px 0px 0px 0px;"><button class="btn btn-primary" onclick="window.location.href='@Url.Action("SkiniRucak", "Restoran")'" type="button" style="padding: 8px;margin: 10px;width: 220px;">Skini ručak</button></div>
+            </div>
+            <div class="row">
+                <div class="col" style="height: 50px;"><button class="btn btn-primary" onclick="window.location.href='@Url.Action("SkiniVeceru", "Restoran")'" type="button" style="height: 42px;width: 220px;margin: 10px;">Skini večeru</button></div>
+            </div>
+        </div>
+    </div>
+    <div class="container" style="width: 400px;margin: -130px 0px 0px 30px;">
+        <div class="row">
+            <div class="col"><label class="col-form-label" style="margin: 0px 0px 0px 65px;">Ručak</label></div>
+            <div class="col"><label class="col-form-label" style="margin: 0px 0px 0px 60px;">Večera</label></div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <h1 class="text-center border rounded-circle">@ViewBag.BrojRucaka</h1>
+            </div>
+            <div class="col">
+                <h1 class="text-center border rounded-circle">@ViewBag.BrojVecera</h1>
+            </div>
+        </div>
+    </div>
+    <div class="row" style="width: 750px;margin: 50px 0px 0px 20px;">
+        <div class="col" style="width: 300px;"><label class="col-form-label text-center" style="font-size: 24px;margin: 11px 0px 0px 40px;">Unesite ID studenta:</label></div>
+        <div class="col" style="width: 350px;"><input type="text" name="fldStudentId" style="margin: 15px 0px 0px 40px;font-size: 24px;width: 300px;"></div>
+    </div>
+    <div class="container float-right" style="width:350px;margin:-400px -10px 0px 15px;">
+        <div class="row" style="width: 350px;">
+            <div class="col" style="margin: 0px;"><button class="btn btn-primary" onclick="window.location.href='@Url.Action("ZahtjevZaNabavkuNamirnica", "Restoran")'" type="button" style="width: 300px;margin: 10px;">Zahtjev za nabavku namirnica</button></div>
+        </div>
+        <div class="row" style="width: 350px;">
+            <div class="col"><button class="btn btn-primary" onclick="window.location.href='@Url.Action("DnevniMeni", "Restoran")'" type="button" style="width: 300px;margin: 10px;">Ažuriranje menija</button></div>
+        </div>
+        <div class="row" style="width: 350px;">
+            <div class="col"><button class="btn btn-primary" onclick="window.location.href='@Url.Action("PregledDnevniMeni", "Restoran")'" type="button" style="width: 300px;margin: 10px;">Pregled menija</button></div>
+        </div>
+        <div class="row" style="width: 350px; height: 172px;">
+            <div class="col"></div>
+        </div>
+        <div class="row" style="width: 350px;">
+            <div class="col"><button class="btn btn-primary" type="submit" style="width: 300px;margin: 10px;">Provjeri ID</button></div>
+        </div>
+        </div>
+    }
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>

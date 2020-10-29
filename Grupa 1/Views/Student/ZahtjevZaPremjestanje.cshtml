@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>zahtjevZaPremjestanje</title>
+    <link rel="stylesheet" href="../../wwwroot/lib/bootstrap/dist/css/bootstrapZahtjevZaPremjestanje.min.css">
+    <link rel="stylesheet" href="../../wwwroot/css/stylesZahtjevZaPremjestanje.css">
+</head>
+
+<body>
+    @using (Html.BeginForm("posaljiZahtjevZaPremjestanje", "Student", new { id = ViewBag.id }, FormMethod.Post))
+    {
+        <h1 class="text-center text-primary" style="font-style: normal;">Zahtjev za premještanje</h1>
+        <div>
+            <div class="container text-left" style="width: 1000px;margin: 70px;">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <tbody>
+                                    <tr style="height: 80px;">
+                                        <td>Trenutni paviljon</td>
+                                        <td><select name="dlTrenutniPaviljon" style="width: 250px;height: 30px;">
+                                                <optgroup label="Trenutni paviljon">
+                                                    @foreach (Paviljon p in ViewBag.paviljoni)
+                                                    {
+                                                        <option value="@p.PaviljonId">@p.Naziv</option>
+                                                    }
+                                                </optgroup>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr style="height: 80px;">
+                                        <td>Trenutna soba</td>
+                                        <td><select name="dlTrenutnaSoba" style="width: 250px;height: 30px;">
+                                                <optgroup label="Trenutna soba">
+                                                    @foreach (Soba s in ViewBag.sobe)
+                                                    {
+                                                        <option value="@s.SobaId">@s.BrojSobe</option>
+                                                    }
+                                                </optgroup>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr style="height: 80px;">
+                                        <td>Novi paviljon<br><br></td>
+                                        <td><select name="dlNoviPaviljon" style="width: 250px;height: 30px;">
+                                                <optgroup label="Novi paviljon">
+                                                    @foreach (Paviljon p in ViewBag.paviljoni)
+                                                    {
+                                                        <option value="@p.PaviljonId">@p.Naziv</option>
+                                                    }
+                                                </optgroup>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr style="height: 80px;">
+                                        <td><label>Nova soba<br></label><br><br><br></td>
+                                        <td><select name="dlNovaSoba" style="width: 250px;height: 30px;">
+                                                <optgroup label="Nova Soba">
+                                                    @foreach (Soba s in ViewBag.sobe)
+                                                    {
+                                                        <option value="@s.SobaId">@s.BrojSobe</option>
+                                                    }
+                                                </optgroup>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr style="height: 150px;">
+                                        <td></td>
+                                        <td><button class="btn btn-primary" type="submit" style="margin: 50px;">Pošalji zahtjev</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <tbody>
+                                    <tr>
+                                        <td style="height: 80px;">Razlog premještanja</td>
+                                    </tr>
+                                    <tr>
+                                        <td><textarea name="fldNapomene" class="form-control-lg" style="width: 400px;height: 234px;"></textarea></td>
+                                    </tr>
+                                    <tr style="height: 150px;">
+                                        <td>
+                                            <div class="btn-group" role="group"><button onclick="window.location.href='@Url.Action("Student", "Student", new { ViewBag.id })'" class="btn btn-secondary" type="button" style="margin: 50px;">Odbaci zahtjev</button></div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    }
+    </body>
+
+</html>

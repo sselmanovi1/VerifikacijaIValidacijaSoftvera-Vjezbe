@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>pregledPremjestanje</title>
+    <link rel="stylesheet" href="../../wwwroot/lib/bootstrap/dist/css/bootstrapPregledPremjestanje.css">
+    <link rel="stylesheet" href="../../wwwroot/css/stylesPregledPremjestanje.css">
+</head>
+
+<body>
+    <h1 class="text-center text-primary" style="font-style: normal;">Pregled zahtjeva za premještanje</h1>
+    <div>
+        <div class="container text-left" style="width: 1000px;margin: 70px;">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <tbody>
+                                <tr style="height: 80px;">
+                                    <td>Trenutni paviljon</td>
+                                    <td><label>@ViewBag.ZahtjevZaPremjestanje.Paviljon1.Naziv</label></td>
+                                </tr>
+                                <tr style="height: 80px;">
+                                    <td>Trenutna soba</td>
+                                    <td><label>@ViewBag.ZahtjevZaPremjestanje.Soba1.BrojSobe</label></td>
+                                </tr>
+                                <tr style="height: 80px;">
+                                    <td>Novi paviljon<br><br></td>
+                                    <td><label>@ViewBag.ZahtjevZaPremjestanje.Paviljon2.Naziv</label></td>
+                                </tr>
+                                <tr style="height: 80px;">
+                                    <td><label>Nova soba<br></label><br><br><br></td>
+                                    <td><label>@ViewBag.ZahtjevZaPremjestanje.Soba2.BrojSobe</label></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="table-responsive" style="margin: 30px;width: 400px;">
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <td style="width: 200px;"><button onclick="window.location.href='@Url.Action("OdobriPremjestanje","Zahtjev", new { id = ViewBag.ZahtjevZaPremjestanje.ZahtjevId })'" class="btn btn-primary" type="button" style="margin: 0px;width: 173px;margin-left: 0px;">Odobri premještanje</button></td>
+                                    <td><button onclick="window.location.href='@Url.Action("OdbijPremjestanje","Zahtjev", new { id = ViewBag.ZahtjevZaPremjestanje.ZahtjevId })'" class="btn btn-secondary" type="button" style="margin: 0px;width: 150px;margin-left: 0px;">Odbij zahtjev</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <td style="height: 80px;">Razlog premještanja</td>
+                                </tr>
+                                <tr>
+                                    <td style="height: 264.4px;"><label>@ViewBag.ZahtjevZaPremjestanje.RazlogPremjestanja</label></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="table-responsive" style="margin: 30px;">
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <td>Podnosilac zahtjeva:</td>
+                                    <td>@ViewBag.ZahtjevZaPremjestanje.Student.LicniPodaci.Prezime @ViewBag.ZahtjevZaPremjestanje.Student.LicniPodaci.Ime</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>pregledNabavka</title>
+    <link rel="stylesheet" href="../../wwwroot/lib/bootstrap/dist/css/bootstrapPregledNabavka.min.css">
+    <link rel="stylesheet" href="../../wwwroot/css/stylesPregledNabavka.css">
+</head>
+
+<body>
+    <h1 class="text-center text-primary" style="font-style: normal;">Pregled zahtjeva za nabavku namirnica</h1>
+    <div>
+        <div class="container text-left" style="width: 1000px;margin: 70px;">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <td style="height: 80px;">Lista namirnica za narudžbu</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <ul class="list-group">
+                                            @foreach (StavkaNarudzbe sn in ViewBag.ZahtjevZaNabavkuNamirnica.StavkeNadruzbe)
+                                            {
+                                                <li class="list-group-item"><span class="d-xl-flex justify-content-xl-start">@sn.Namirnica</span><span class="d-xl-flex justify-content-xl-end">@sn.Kolicina @sn.MjernaJedinica</span></li>
+                                            }
+
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <td style="height: 80px;"></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center" style="height: 100px;"><button onclick="window.location.href='@Url.Action("OdobriNamirnice", "Zahtjev", new { id = ViewBag.ZahtjevZaNabavkuNamirnica.ZahtjevId })'" class="btn btn-primary" type="button" style="margin: 0px;width: 150px;margin-left: 0px;">Odobri nabavku</button></td>
+                                </tr>
+                                <tr style="height: 150px;">
+                                    <td class="text-center">
+                                        <div class="btn-group" role="group"></div><button onclick="window.location.href='@Url.Action("OdbijNamirnice", "Zahtjev", new { id = ViewBag.ZahtjevZaNabavkuNamirnica.ZahtjevId })'" class="btn btn-secondary" type="button" style="margin: 0px;width: 150px;margin-left: 0px;">Odbij zahtjev</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>

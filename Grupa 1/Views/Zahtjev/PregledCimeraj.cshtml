@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>pregledCimeraj</title>
+    <link rel="stylesheet" href="../../wwwroot/lib/bootstrap/dist/css/bootstrapCimeraj.min.css>
+    <link rel="stylesheet" href="../../wwwroot/css/stylesPregledCimeraj.css">
+</head>
+
+<body>
+    <h1 class="text-center text-primary" style="font-style: normal;">Pregled cimeraja</h1>
+    <div>
+        <div class="container text-left" style="width: 1000px;margin: 70px;height: 500px;">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <tbody>
+                                <tr style="height: 80px;">
+                                    <td>Paviljon</td>
+                                    <td><label>@ViewBag.ZahtjevZaCimeraj.Paviljon.Naziv</label></td>
+                                </tr>
+                                <tr style="height: 80px;">
+                                    <td>Soba</td>
+                                    <td><label>@ViewBag.ZahtjevZaCimeraj.Soba.BrojSobe<label></td>
+                                </tr>
+                                <tr style="height: 80px;">
+                                    <td>Prvi cimer</td>
+                                    <td><label>@ViewBag.ZahtjevZaCimeraj.Cimer1.LicniPodaci.Prezime @ViewBag.ZahtjevZaCimeraj.Cimer1.LicniPodaci.Ime</label></td>
+                                </tr>
+                                <tr style="height: 80px;">
+                                    <td>Drugi cimer</td>
+                                    <td><label>@ViewBag.ZahtjevZaCimeraj.Cimer2.LicniPodaci.Prezime @ViewBag.ZahtjevZaCimeraj.Cimer2.LicniPodaci.Ime</label></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <td style="height: 80px;">Dodatne napomene</td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 469.6px;height: 239.4px;"><label>@ViewBag.ZahtjevZaCimeraj.DodatneNapomene</label></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="table-responsive" style="width: 980px;">
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <td style="width: 483px;">
+                                <div class="table-responsive" style="margin: 30px;width: 400px;">
+                                    <table class="table">
+                                        <tbody>
+                                            <tr>
+                                                <td style="width: 200px;"><button onclick="window.location.href='@Url.Action("OdobriCimeraj","Zahtjev")?id=' + @ViewBag.ZahtjevZaCimeraj.ZahtjevId" class="btn btn-primary" type="button" style="margin: 0px;width: 150px;margin-left: 0px;">Odobri zahtjev</button></td>
+                                                <td><button onclick="window.location.href='@Url.Action("OdbijCimeraj","Zahtjev")?id=' + @ViewBag.ZahtjevZaCimeraj.ZahtjevId" class="btn btn-secondary" type="button" style="margin: 0px;width: 150px;margin-left: 0px;">Odbij zahtjev</button></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="table-responsive" style="margin: 30px;width: 410px;">
+                                    <table class="table">
+                                        <tbody>
+                                            <tr style="width: 427px;">
+                                                <td style="width: 240px;">Podnosilac zahtjeva:</td>
+                                                <td style="width: 240px;">@ViewBag.ZahtjevZaCimeraj.Student.LicniPodaci.Prezime @ViewBag.ZahtjevZaCimeraj.Student.LicniPodaci.Ime</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>

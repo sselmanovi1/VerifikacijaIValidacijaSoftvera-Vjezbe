@@ -1,0 +1,57 @@
+﻿@model StudentskiDom.ViewModels.LoginViewModel
+@{
+    ViewData["Title"] = "Login";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Untitled</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrapBlagajnaLogin.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    
+    <style>
+        div label{
+            text-align: right;
+            clear: both;
+            float:left;
+            margin-right:15px;
+        }
+    </style>
+</head>
+
+
+<body class="text-center" style="background-color: #0c0b0d;margin: 0px;padding: 10px;">
+    <div style="height: 133px;margin: 25px;font-family: COOPER;color: rgb(254,254,254);padding: 50px;">
+        <h1 style="font-size: 48px;">DOBRO DOŠLI U</h1>
+        <p style="font-size: 57px;">STUDENTSKI DOM</p>
+    </div>
+    <div style="height: 360px;">
+        <form method="post">
+            <div class="border-white shadow; " style="margin: 150px 0px 0px 350px;padding: 0px;width: 700px;">
+                <div class="form-group border-primary" style="width: 540px;margin: 0px 0px 10px 0px;padding: 17px;">
+                    <label asp-for="Username" style="color: rgb(253,253,254);font-family: Cooper;width: 160px;font-size: 19px;height: 28px;margin: 0px;">Korisničko ime:&nbsp;</label><input asp-for="Username" class="border rounded form-control" type="text" style="width: 331px;">
+                    <span asp-validation-for="Username" class="text-danger" style="margin: 0px 0px 0px 20px"></span>
+                </div>
+                <div class="form-group" style="width: 540px;margin: -20px 0px 0px 0px;padding: 17px;">
+                    <label style="color: rgb(253,253,254);width: 146px;font-size: 19px;font-family: Cooper;">Lozinka:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</label>
+                    <input asp-for="Password" class="border rounded form-control" style="width: 331px;">
+                    <span asp-validation-for="Password" class="text-danger" style="margin: 0px 100px 0px -85px"></span>
+                    <div asp-validation-summary="ModelOnly" class="text-danger" style="margin-left:-300px"></div>
+                </div><a class="text-center" href='@Url.Action("ObrazacZaUpis","Home")' style="margin: 20px 0px 0px -80px;">Postanite stanar našeg doma</a><button class="btn btn-primary" type="submit" style="width: 150px;margin: 0px 0px 0px 90px;">Prijavi se</button>
+
+
+            </div><img class="shadow-none" src="~/images/urban.png" style="margin: -350px 460px 0px -450px; width: 500px;height: 500px; border:0;">
+            <div style="width: 300px; margin-left:400px">
+                <label style="width: 100px">Done by: </label><a style="width:50px; margin-left:-50px" href="https://github.com/ooad-2019-2020/Grupa3-Domari/tree/master">Domari</a>
+            </div>
+        </form>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>
+

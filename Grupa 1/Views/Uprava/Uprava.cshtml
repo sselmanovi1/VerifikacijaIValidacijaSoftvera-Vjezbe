@@ -1,0 +1,38 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>ViewCreating</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrapUpravaIStudent.min.css">
+    <link rel="stylesheet" href="~/css/stylesUpravaIStudent.css">
+</head>
+
+<body class="text-center">
+    <div style="margin-top: 50px;height: 400px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 align-self-center">
+                    <h1 class="display-4 text-center text-primary" style="margin-top: 0px;font-size: 100px;"><strong>UPRAVA</strong></h1>
+                </div>
+                <div class="col align-self-center" style="height: 450px;">
+                    <div class="btn-group-vertical btn-group-lg" role="group" style="height: 400px;width: 400px;">
+                        <button onclick="window.location.href='@Url.Action("ListaStudenata","Uprava")'" class="btn btn-primary border rounded" type="button" style="padding: 6px;margin: 15px;padding-left: 23;font-size: 20px;">Lista studenata</button>
+                        <button onclick="window.location.href='@Url.Action("SmjestajniKapacitet","Uprava")'" class="btn btn-primary border rounded" type="button" style="margin: 15px;font-size: 20px;">Smještajni kapacitet</button>
+                        <button onclick="window.location.href='@Url.Action("Blagajna","Uprava")'" class="btn btn-primary border rounded" type="button" style="margin: 15px;font-size: 20px;">Blagajna</button>
+                        <button onclick="window.location.href='@Url.Action("PregledZahtjeva","Zahtjev")'" class="btn btn-primary border rounded" type="button" style="margin: 15px;font-size: 20px;">Pregled zahtjeva</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>

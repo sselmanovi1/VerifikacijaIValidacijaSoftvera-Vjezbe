@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>ViewCreating</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body class="text-center">
+    <h1 style="margin-top: 50px;">Smještajni kapacitet</h1>
+    <h4 style="margin-top: 50px;">Odaberite paviljon i sobu:</h4>
+    @using (Html.BeginForm("DajKpacitet", "Uprava", FormMethod.Post))
+    {
+        <select name="dlPaviljon" style="width: 300px;margin-top: 20px;">
+            <optgroup label="Izaberite paviljon">
+                @foreach (var paviljon in ViewBag.paviljoni)
+                {
+                    <option value="@paviljon.PaviljonId" >@paviljon.Naziv</option>
+                }
+            </optgroup>
+        </select>
+
+        <select name="dlSoba" style="width: 300px;margin-top: 20px;">
+            <optgroup label="Izaberite sobu">
+                @foreach (var sobe in ViewBag.sobe)
+                {
+                    <option value="@sobe.SobaId" >@sobe.BrojSobe</option>
+                }
+            </optgroup>
+        </select>
+
+        <button class="btn btn-primary border rounded" type="submit" style="padding: 6px;margin: 15px;padding-left: 23;font-size: 20px;">Osvježi</button>
+    }
+    <div class="table-responsive" style="margin-top: 50px;">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Ime i prezime</th>
+                    <th>Paviljon</th>
+                    <th>Soba</th>
+                    <th>Kanton</th>
+                    <th>Fakultet</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var student in ViewBag.studentiSoba)
+                {
+                    <tr>
+                        <td>@student.LicniPodaci.Ime @student.LicniPodaci.Prezime</td>
+                        <td>@student.Soba.Paviljon.Naziv</td>
+                        <td>@student.Soba.BrojSobe</td>
+                        <td>@student.PrebivalisteInfo.Kanton</td>
+                        <td>@student.SkolovanjeInfo.Fakultet</td>
+                    </tr>
+                }
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td align="left"><button onclick="window.location.href='@Url.Action("Uprava", "Uprava", new { ViewBag.id })'" class="btn btn-primary border rounded" type="button" style="padding: 6px;margin: 15px;padding-left: 23;font-size: 20px; width: 200px;">Gotovo</button></td>
+                <td></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>

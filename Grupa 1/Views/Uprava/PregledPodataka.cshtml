@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>odobriUpis</title>
+    <link rel="stylesheet" href="../../wwwroot/lib/bootstrap/dist/css/bootstrapPregledUpis.min.css">
+    <link rel="stylesheet" href="../../wwwroot/css/stylesPregledUpis.css">
+</head>
+
+<body>
+    <h1 class="text-center text-primary" style="font-style: normal;">Pregled zahtjeva za upis</h1>
+    <div>
+        <div class="container text-left" style="width: 1000px;margin: 70px;">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="table-responsive border rounded border-secondary shadow">
+                        <table class="table table-sm">
+                            <thead>
+                                <tr>
+                                    <th class="table-secondary" style="width: 231px;">Lični podaci:</th>
+                                    <th class="table-secondary" style="width: 223px;"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr style="height: 80px;">
+                                    <td>&nbsp; Prezime&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<label>@ViewBag.Student.LicniPodaci.Prezime</label></td>
+                                    <td>JMBG&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<label>@ViewBag.Student.LicniPodaci.Jmbg.ToString()</label></td>
+                                </tr>
+                                <tr style="height: 80px;">
+                                    <td>&nbsp; Ime&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<label>@ViewBag.Student.LicniPodaci.Ime</label></td>
+                                    <td>Datum rođenja&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<label>@ViewBag.Student.LicniPodaci.DatumRodjenja.ToShortDateString()</label></td>
+                                </tr>
+                                <tr style="height: 80px;">
+                                    <td>&nbsp; Mjesto rođenja&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<label>@ViewBag.Student.LicniPodaci.MjestoRodjenja</label></td>
+                                    <td><label>Mobitel&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</label><label>+387 @ViewBag.Student.LicniPodaci.Mobitel.ToString()</label></td>
+                                </tr>
+                                <tr style="height: 80px;">
+                                    <td>&nbsp; Pol&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<label>@ViewBag.Student.LicniPodaci.Pol.ToString()</label></td>
+                                    <td></td>
+                                </tr>
+                                <tr style="height: 150px;">
+                                    <td><label>&nbsp; E-mail&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</label><label style="margin-left: 9px;">@ViewBag.Student.LicniPodaci.Email</label></td>
+                                    <td><label>Slika&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</label><img src="~/images/@ViewBag.Student.LicniPodaci.Slika" style="width: 120px;height: 120px;margin: 14px;"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="table-responsive" style="margin: 30px;width: 400px;">
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <td style="width: 200px;"><button onclick="window.location.href='@Url.Action("ListaStudenata", "Uprava", new { id = ViewBag.id })'" class="btn btn-primary" type="button" style="margin: 0px;width: 150px;margin-left: 0px;">Gotovo</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="table-responsive border rounded border-secondary shadow">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th class="table-secondary" style="width: 235.1px;">Podaci o prebivalištu:</th>
+                                    <th class="table-secondary"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td style="height: 80px;">Adresa&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<label>@ViewBag.Student.PrebivalisteInfo.Adresa</label></td>
+                                    <td style="height: 80px;">Kanton&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<label>@ViewBag.Student.PrebivalisteInfo.Kanton</label></td>
+                                </tr>
+                                <tr>
+                                    <td><label>Općina&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</label><label>@ViewBag.Student.PrebivalisteInfo.Opcina</label></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="table-responsive border rounded border-secondary shadow" style="margin-top: 50px;">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th class="table-secondary" style="width: 235.1px;">Podaci o školovanju:</th>
+                                    <th class="table-secondary"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td style="height: 80px;">Fakultet&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<label>@ViewBag.Student.SkolovanjeInfo.Fakultet</label></td>
+                                    <td style="height: 80px;">Ciklus studija&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<label>@ViewBag.Student.SkolovanjeInfo.CiklusStudija</label></td>
+                                </tr>
+                                <tr>
+                                    <td><label>Broj indeksa&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</label><label>@ViewBag.Student.SkolovanjeInfo.BrojIndeksa</label></td>
+                                    <td><label>Godina studija&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </label><label>@ViewBag.Student.SkolovanjeInfo.GodinaStudija    </label></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="table-responsive" style="margin: 30px;margin-top: 69px;">
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <td style="width: 200px;"><button onclick="window.location.href='@Url.Action("ObrisiStudenta", "Uprava", new { id = ViewBag.Student.Id })'" class="btn btn-primary" type="button" style="margin: 0px;width: 150px;margin-left: 0px;">Obriši studenta</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>

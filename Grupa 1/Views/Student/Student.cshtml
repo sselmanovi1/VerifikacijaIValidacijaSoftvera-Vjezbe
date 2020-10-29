@@ -1,0 +1,93 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>ViewCreating</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrapUpravaIStudent.min.css">
+    <link rel="stylesheet" href="~/css/stylesUpravaIStudent.css">
+</head>
+
+<body>
+    <div class="container border rounded border-dark">
+        <div class="row" style="height: 300px;margin-left: 0px;">
+            <div class="col text-center" style="height: 110px;">
+                @if ((ViewBag.Pol).Equals("Musko"))
+                {
+                    <h1 style="margin-top: 100px;">Dobro došao</h1>
+                }
+                else
+                {
+                    <h1 style="margin-top: 100px;">Dobro došla</h1>
+                }
+
+                <h1>@ViewBag.ImePrezime</h1>
+            </div>
+            <div class="col text-center"><img src="~/images/@ViewBag.Slika" style="width: 200px;height: 200px;margin-top: 50px;"></div>
+        </div>
+        <div class="row" style="height: 315px;">
+            <div class="col text-center">
+                <h5 class="text-center" style="margin-top: 20px;margin-left: 40px;">Broj ručaka:</h5>
+                <h1 class="text-center border rounded-circle border-dark" style="margin-top: 50px;width: 150px;font-size: 70px;height: 150px;margin-left: 70px;padding-top: 20px;">@ViewBag.BrojRucaka</h1>
+            </div>
+            <div class="col text-center" style="margin-left: 0px;">
+                <h5 style="margin-top: 20px;">Broj večera:</h5>
+                <h1 class="text-center border rounded-circle border-dark" style="margin-top: 50px;width: 150px;font-size: 70px;height: 150px;margin-left: 50px;padding-top: 20px;">@ViewBag.BrojVecera</h1>
+            </div>
+            <div class="col-6 text-center">
+                <div class="table-responsive border rounded border-dark shadow-lg">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th class="bg-secondary" colspan="2">Osnovni podaci:</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-left">ID:</td>
+                                <td>@ViewBag.Id</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">Datum rođenja:</td>
+                                <td>@ViewBag.DatumRodjenja</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">Mjesto rođenja:</td>
+                                <td>@ViewBag.MjestoRodjenja</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">Fakultet:</td>
+                                <td>@ViewBag.Fakultet</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">JMBG:</td>
+                                <td>@ViewBag.JMBG</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">Broj sobe:</td>
+                                <td>@ViewBag.BrojSobe</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="row" style="height: 150px;">
+            <div class="col text-center align-self-center">
+                <a href='@Url.Action("ZahtjevZaPremjestanje","Student", new { id = ViewBag.Id })' class="text-primary">Podnesi zahtjev za premještanje</a>
+            </div>
+            <div class="col align-self-center">
+                <a href='@Url.Action("Cimeraj","Student", new { id = ViewBag.Id })' class="text-center text-primary">Popuni cimeraj</a>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>

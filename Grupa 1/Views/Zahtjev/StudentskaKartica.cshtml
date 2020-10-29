@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>studentskakarticaview</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+    <div style="width: 650px;height: 70px;margin: 47px;">
+        <h1 style="font-size: 50px;font-family: cooper;width: 600px;">PREGLED KARTICE</h1>
+    </div>
+    <div class="border rounded border-primary" style="height: 400px;width: 900px;margin: 50px 0px 0px 150px;">
+        <div class="row" style="width: 850px;margin: 30px 0px 0px 30px;">
+            <div class="col-lg-6" style="width: 400px;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col"><label class="col-form-label" style="margin: 0px 0px 0px 130px;">STUDENTSKI DOM</label></div>
+                    </div>
+                    <div class="row">
+                        <div class="col"><label class="col-form-label" style="margin: 0px 0px 0px 155px;">2019/2020</label></div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="row">
+                                <div class="col"><label class="col-form-label" style="margin: 0px 0px 0px 70px;">Soba</label></div>
+                            </div>
+                            <div class="row">
+                                <div class="col"><label class="col-form-label" style="margin: 0px 0px 0px 83px;">@ViewBag.Soba</label></div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="row">
+                                <div class="col"><label class="col-form-label" style="margin: 0px 0px 0px 70px;">Paviljon</label></div>
+                            </div>
+                            <div class="row">
+                                <div class="col"><label class="col-form-label" style="margin: 0px 0px 0px 90px;">@ViewBag.Paviljon</label></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col" style="margin: 25px 0px 0px 0px;"><label class="col-form-label">Ime</label></div>
+                    </div>
+                    <div class="row">
+                        <div class="col"><label class="col-form-label text-center border rounded border-secondary" style="width: 380px;height: 35px;font-size: 15px;">@ViewBag.Ime</label></div>
+                    </div>
+                    <div class="row">
+                        <div class="col"><label class="col-form-label">Prezime</label></div>
+                    </div>
+                    <div class="row">
+                        <div class="col"><label class="col-form-label text-center border rounded border-secondary" style="width: 380px;height: 35px;font-size: 15px;">@ViewBag.Prezime</label></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6" style="margin: 0px 0px 0px 0px;">
+                <div class="container" style="width: 260px;">
+                    <div class="row">
+                        <div class="col"><img src="~/images/@ViewBag.Slika" style="width: 200px;height: 160px;margin: 15px 0px 0px 10px;"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col" style="height: 38px;"><label class="col-form-label text-center" style="width: 250px;margin: 0px 0px 0px -10px;">ID</label></div>
+                    </div>
+                    <div class="row">
+                        <div class="col text-center" style="height: 38px;"><label class="col-form-label border rounded border-secondary" style="width: 250px;margin: 0px 0px 0px -10px;height: 35px;">@ViewBag.ID</label></div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="row">
+                                <div class="col"><label class="col-form-label text-center" style="width: 95px;">Fakultet</label></div>
+                            </div>
+                            <div class="row">
+                                <div class="col"><label class="col-form-label text-center border rounded border-secondary" style="width: 95px;">@ViewBag.Fakultet</label></div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="row">
+                                <div class="col"><label class="col-form-label text-center" style="width: 95px;">Kanton</label></div>
+                            </div>
+                            <div class="row">
+                                <div class="col"><label class="col-form-label text-center border rounded border-secondary" style="width: 95px;">@ViewBag.Kanton</label></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>
