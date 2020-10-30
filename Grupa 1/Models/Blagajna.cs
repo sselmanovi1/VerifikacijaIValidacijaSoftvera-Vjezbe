@@ -60,7 +60,7 @@ namespace StudentskiDom.Models
 
         public void AzurirajStanjeVeceraAsync(int id)
         {
-            TrenutniStudentD.BrojVecera += 25 * 3.14;
+            TrenutniStudentD.BrojVecera += (int)(25 * 3.14);
         }
     }
 }
