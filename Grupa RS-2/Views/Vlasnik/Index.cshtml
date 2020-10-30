@@ -1,0 +1,62 @@
+﻿@model IEnumerable<EParking.Models.Vlasnik>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+    <div class="landing-section">
+
+
+        <h1>Vlasnik</h1>
+        
+        <p>
+            <a asp-controller="Administrator" asp-action="Account">Nazad na početnu</a>
+        </p>
+
+        <p>
+            <a asp-action="Create">Dodaj</a>
+        </p>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Username)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Password)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.ImePrezime)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Prihodi)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Username)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Password)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ImePrezime)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Prihodi)
+                        </td>
+                        <td>
+                            <a asp-action="Delete" asp-route-id="@item.ID">Obriši</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+    </div>

@@ -1,0 +1,38 @@
+﻿@model EParking.Models.Zahtjev
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<hr />
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">Slanje zahtjeva(3/3)</div>
+                <div class="card-body">
+
+                    <form asp-action="Create">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <div class="row justify-content-center">
+                            <input id="btnSubmit" type="submit" value="Pošalji zahtjev" class="btn btn-secondary" />
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script>
+    if (@Html.Raw(ViewBag.Alert) == 'show') {
+        swal("Registracija završena!", "Vaš zahtjev je uspješno poslat.", "success");
+    }
+
+</script>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

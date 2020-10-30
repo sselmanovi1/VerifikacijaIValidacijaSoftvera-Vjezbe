@@ -1,0 +1,57 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+    <ul class="navbar-nav">
+        @if (SignInManager.IsSignedIn(User))
+        {
+            <li class="nav-item">
+                <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Hello @User.Identity.Name!</a>
+            </li>
+            <li class="nav-item">
+                <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                    <button type="submit" class="nav-link btn btn-link text-dark">Logout</button>
+                </form>
+            </li>
+        }
+        else
+        {
+                if (!EParkingFacade.ClanSignedIn() && !EParkingFacade.VlasnikSignedIn() && !EParkingFacade.AdminSignedIn())
+                {
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Clan" asp-action="Create">Register</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="EParking" asp-action="Login">Login</a>
+                    </li>
+                }
+                else if (EParkingFacade.ClanSignedIn())
+                {
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Clan" asp-action="Account">Moj profil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Clan" asp-action="Logout">Log out</a>
+                    </li>
+                }
+                else if (EParkingFacade.VlasnikSignedIn())
+                {
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Vlasnik" asp-action="Account">Moj profil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Vlasnik" asp-action="Logout">Log out</a>
+                    </li>
+                }
+                else if (EParkingFacade.AdminSignedIn())
+                {
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Administrator" asp-action="Account">Moj profil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Administrator" asp-action="Logout">Log out</a>
+                    </li>
+                }
+
+        }
+    </ul>
