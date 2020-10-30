@@ -1,0 +1,33 @@
+﻿@model BloodAlliance.Models.Zahtjev
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Potvrda</h1>
+
+<h3>Da li zelite potvrditi zahtjev?</h3>
+<div>
+    <h4>Zahtjev</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Datum)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Datum)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.KrvnaGrupa)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.KrvnaGrupa)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="ZahtjevId" />
+        <input type="submit" value="Potvrdi" class="btn btn-danger" /> |
+        <a asp-action="Index">Nazad</a>
+    </form>
+</div>

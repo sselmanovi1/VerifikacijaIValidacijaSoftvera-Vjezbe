@@ -1,0 +1,49 @@
+﻿@model IEnumerable<BloodAlliance.Models.Zahtjev>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<p>
+    <a asp-action="Create">Kreiraj zahtjev</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Datum)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.KrvnaGrupa)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RhFaktor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NazivBolnice)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Datum)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.KrvnaGrupa)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RhFaktor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NazivBolnice)
+            </td>
+            <td>
+                <a class="btn btn-danger" type="button" style="font-size: 15px" asp-action="Delete" asp-route-id="@item.ZahtjevId">Potvrdi</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
