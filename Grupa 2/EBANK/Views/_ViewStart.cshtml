@@ -1,0 +1,18 @@
+﻿@{
+    var controllerName = this.ViewContext.RouteData.Values["controller"].ToString();
+
+    if (controllerName == "Login")
+        Layout = "_Empty";
+    else if (controllerName.StartsWith("Administrator") && !controllerName.Contains("Home"))
+        Layout = "_AdministratorLayout";
+    else if (controllerName.Contains("AdministratorHome"))
+        Layout = "_AdministratorHomeLayout";
+    else if (controllerName.StartsWith("Bankar") && !controllerName.Contains("Home"))
+        Layout = "_BankarLayout";
+    else if (controllerName.Contains("BankarHome"))
+        Layout = "_BankarHomeLayout";
+    else if (controllerName.StartsWith("Klijent") && !controllerName.Contains("Home"))
+        Layout = "_KlijentLayout";
+    else if (controllerName.Contains("KlijentHome"))
+        Layout = "_KlijentHomeLayout";
+}

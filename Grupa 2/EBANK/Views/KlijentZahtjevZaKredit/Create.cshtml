@@ -1,0 +1,125 @@
+﻿@model EBANK.Models.ZahtjevZaKredit
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+@{
+    var racuni = (List < Racun>)ViewData["racuni"];
+}
+
+
+<h4>Zahtjev za kredit</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="None" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Racun.Id" class="control-label"></label>
+                <select asp-for="Racun.Id" class="form-control">
+                    @foreach (var Item in racuni)
+                    {
+                        <option value="@Item.Id"> Račun broj @Item.Id</option>
+                    }
+                </select>
+                <span asp-validation-for="Racun.Id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RokOtplate" class="control-label"></label>
+                <select asp-for="RokOtplate" class="form-control" asp-items="Html.GetEnumSelectList<RokOtplate>()">
+                    <option> Odaberite </option>
+                </select>
+                <span asp-validation-for="RokOtplate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NamjenaKredita" class="control-label"></label>
+                <input asp-for="NamjenaKredita" class="form-control" />
+                <span asp-validation-for="NamjenaKredita" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MjesecniPrihodi" class="control-label"></label>
+                <input asp-for="MjesecniPrihodi" class="form-control" />
+                <span asp-validation-for="MjesecniPrihodi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProsjecniTroskoviDomacinstva" class="control-label"></label>
+                <input asp-for="ProsjecniTroskoviDomacinstva" class="form-control" />
+                <span asp-validation-for="ProsjecniTroskoviDomacinstva" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NazivRadnogMjesta" class="control-label"></label>
+                <input asp-for="NazivRadnogMjesta" class="form-control" />
+                <span asp-validation-for="NazivRadnogMjesta" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NazivPoslodavca" class="control-label"></label>
+                <input asp-for="NazivPoslodavca" class="form-control" />
+                <span asp-validation-for="NazivPoslodavca" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RadniStaz" class="control-label"></label>
+                <input asp-for="RadniStaz" class="form-control" />
+                <span asp-validation-for="RadniStaz" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BrojNekretnina" class="control-label"></label>
+                <input asp-for="BrojNekretnina" class="form-control" />
+                <span asp-validation-for="BrojNekretnina" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BracnoStanje" class="control-label"></label>
+                <select asp-for="BracnoStanje" class="form-control" asp-items="Html.GetEnumSelectList<BracnoStanje>()">
+                    <option> Odaberite </option>
+                </select>
+                <span asp-validation-for="BracnoStanje" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SupruznikIme" class="control-label"></label>
+                <input asp-for="SupruznikIme" class="form-control" />
+                <span asp-validation-for="SupruznikIme" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SupruznikPrezime" class="control-label"></label>
+                <input asp-for="SupruznikPrezime" class="form-control" />
+                <span asp-validation-for="SupruznikPrezime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SupruznikZanimanje" class="control-label"></label>
+                <input asp-for="SupruznikZanimanje" class="form-control" />
+                <span asp-validation-for="SupruznikZanimanje" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="ImaNeplacenihDugova" /> @Html.DisplayNameFor(model => model.ImaNeplacenihDugova)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="BrojNeplacenihDugova" class="control-label"></label>
+                <input asp-for="BrojNeplacenihDugova" class="form-control" value="0"/>
+                <span asp-validation-for="BrojNeplacenihDugova" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Iznos" class="control-label"></label>
+                <input asp-for="Iznos" class="form-control" />
+                <span asp-validation-for="Iznos" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="KamatnaStopa" class="control-label"></label>
+                <input asp-for="KamatnaStopa" class="form-control" />
+                <span asp-validation-for="KamatnaStopa" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Pošalji" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Povratak na listu</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

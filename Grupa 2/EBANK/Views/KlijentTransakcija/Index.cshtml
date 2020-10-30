@@ -1,0 +1,50 @@
+﻿@model IEnumerable<EBANK.Models.Transakcija>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Vrijeme)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Iznos)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VrstaTransakcije)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NacinTransakcije)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Vrijeme)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Iznos)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VrstaTransakcije)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NacinTransakcije)
+            </td>
+            <td>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,43 @@
+﻿@model EBANK.Models.Konverzija
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+
+<h4>Konverzija valuta</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form>
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="IzValute" class="control-label"></label>
+                <select asp-for="IzValute" class="form-control" asp-items="Html.GetEnumSelectList<Valuta>()"></select>
+                <span asp-validation-for="IzValute" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Iznos" class="control-label"></label>
+                <input asp-for="Iznos" class="form-control" />
+                <span asp-validation-for="Iznos" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UValutu" class="control-label"></label>
+                <select asp-for="UValutu" class="form-control" asp-items="Html.GetEnumSelectList<Valuta>()"></select>
+                <span asp-validation-for="UValutu" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="KonvertovaniIznos" class="control-label"></label>
+                @Html.DisplayFor(model => model.KonvertovaniIznos)
+                <span asp-validation-for="KonvertovaniIznos" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Konvertuj" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+<div>
+    <a asp-controller="KlijentHome" asp-action="Index">Nazad na početnu stranicu</a>
+</div>
+

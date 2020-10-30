@@ -1,0 +1,69 @@
+﻿@model EBANK.Models.Transakcija
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+@{
+    var racuni = (List<Racun>)ViewData["racuni"];
+}
+
+<h4>Uplata</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form id="form" asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="SaRacuna" class="control-label"></label>
+                <select asp-for="SaRacuna.Id" class="form-control">
+                    @foreach (var Item in racuni)
+                    {
+                        <option value="@Item.Id"> Račun broj @Item.Id</option>
+                    }
+                </select>
+                <span asp-validation-for="SaRacuna.Id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NaRacun" class="control-label"></label>
+                <input asp-for="NaRacun.Id" class="form-control" />
+                <span asp-validation-for="NaRacun.Id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Iznos" class="control-label"></label>
+                <input asp-for="Iznos" class="form-control" />
+                <span asp-validation-for="Iznos" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="VrstaTransakcije" class="control-label"></label>
+                <select asp-for="VrstaTransakcije" class="form-control" asp-items="Html.GetEnumSelectList<VrstaTransakcije>()">
+                    <option> Odaberite </option>
+                </select>
+                <span asp-validation-for="VrstaTransakcije" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NacinTransakcije" class="control-label"></label>
+                <select asp-for="NacinTransakcije" class="form-control" asp-items="Html.GetEnumSelectList<NacinTransakcije>()">
+                    <option> Odaberite </option>
+                </select>
+                <span asp-validation-for="NacinTransakcije" class="text-danger"></span>
+            </div>
+            @if ((bool)ViewData["nemaSredstava"])
+            {
+                <p class="alert-danger">Nema sredstava</p>
+            }
+            <div class="form-group">
+                <button onclick="uplati()" type="button" class="btn btn-primary">Uplati</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+    function uplati() {
+        var r = confirm("Da li ste sigurni?");
+        if (r == true)
+            document.getElementById("form").submit();
+    }
+</script>
+

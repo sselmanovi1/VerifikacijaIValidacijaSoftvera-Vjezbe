@@ -1,0 +1,63 @@
+﻿@model IEnumerable<EBANK.Models.Transakcija>
+
+@{
+    ViewData["Title"] = "Transakcije";
+}
+
+<h1>Transakcije</h1>
+
+<p>
+    
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.SaRacuna)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NaRacun)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Iznos)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Vrijeme)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VrstaTransakcije)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NacinTransakcije)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.SaRacuna.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NaRacun.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Iznos) KM
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Vrijeme)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VrstaTransakcije)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NacinTransakcije)
+            </td>
+            <td>
+                <a asp-action="Details" asp-route-id="@item.Id">Detalji</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

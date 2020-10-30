@@ -1,0 +1,44 @@
+﻿@model EBANK.Models.Racun
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Dodavanje računa</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="None" class="text-danger"></div>
+            <label asp-for="Klijent" class="control-label"></label>
+            <div class="form-group">
+                <label asp-for="Klijent.BrojLicneKarte" class="control-label"></label>
+                <input asp-for="Klijent.BrojLicneKarte" class="form-control" />
+                <span asp-validation-for="Klijent.BrojLicneKarte" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StanjeRacuna" class="control-label"></label>
+                <input asp-for="StanjeRacuna" value="0" default ="0" class="form-control" />
+                <span asp-validation-for="StanjeRacuna" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="VrstaRacuna" class="control-label"></label>
+                <select asp-for="VrstaRacuna" class="form-control" asp-items="Html.GetEnumSelectList<VrstaRacuna>()"></select>
+                <span asp-validation-for="VrstaRacuna" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Dodaj" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Povratak na listu</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

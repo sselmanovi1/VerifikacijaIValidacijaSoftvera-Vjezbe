@@ -1,0 +1,52 @@
+﻿@model IEnumerable<EBANK.Models.ZahtjevZaKredit>
+
+@{
+    ViewData["Title"] = "Zahtjevi za kredit";
+}
+
+    <h1>Zahtjevi za kredit</h1>
+
+<p>
+    
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Racun.Klijent.Ime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Racun.Klijent.Prezime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Racun.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Iznos)
+            </th>
+
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Racun.Klijent.Ime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Racun.Klijent.Prezime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Racun.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Iznos) KM
+            </td>
+            <td>
+                <a asp-action="Details" asp-route-id="@item.Id">Detalji</a> 
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

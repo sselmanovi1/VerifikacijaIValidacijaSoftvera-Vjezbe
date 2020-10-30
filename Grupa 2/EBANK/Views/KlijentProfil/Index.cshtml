@@ -1,0 +1,206 @@
+﻿@model EBANK.Models.Klijent
+
+@{
+    ViewData["Title"] = "Index";
+    var transakcije = (List<Transakcija>)ViewData["transakcije"];
+    var racuni = (List<Racun>)ViewData["racuni"];
+    var krediti = (List<Kredit>)ViewData["krediti"];
+}
+
+<h1>@Model.Ime @Model.Prezime</h1>
+<p>
+</p>
+<div>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Ime)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Ime)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Prezime)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Prezime)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.KorisnickoIme)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.KorisnickoIme)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Lozinka)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Lozinka)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DatumRodjenja)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DatumRodjenja)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Spol)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Spol)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.JMBG)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.JMBG)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.BrojTelefona)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.BrojTelefona)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.BrojLicneKarte)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.BrojLicneKarte)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Zanimanje)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Zanimanje)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Drzava)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Drzava)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Grad)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Grad)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Adresa.Naziv)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Adresa.Naziv)
+        </dd>
+    </dl>
+</div>
+<h4>Racuni</h4>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => new Racun().Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => new Racun().VrstaRacuna)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => new Racun().StanjeRacuna)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in racuni)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.VrstaRacuna)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StanjeRacuna) KM
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<h4>Transakcije</h4>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => new Transakcija().SaRacuna)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => new Transakcija().NaRacun)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => new Transakcija().Iznos)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => new Transakcija().Vrijeme)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => new Transakcija().VrstaTransakcije)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in transakcije)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SaRacuna.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NaRacun.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Iznos) KM
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Vrijeme)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.VrstaTransakcije)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<h4>Krediti</h4>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => new Kredit().Iznos)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => new Kredit().IsplaceniIznos)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => new Kredit().RokOtplate)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in krediti)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Iznos) KM
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IsplaceniIznos) KM
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.RokOtplate)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,35 @@
+﻿@model EBANK.Models.Korisnik
+
+@{
+    ViewData["Title"] = "Prijava";
+}
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-lg-5">
+            <img src="/assets/img/logo ebank.png" style="
+                height: 100px;
+                margin-top: 40px !important;
+                margin:  0 auto;
+                display: block;
+            ">
+            <div class="card shadow-lg border-0 rounded-lg mt-5" style="margin-top: 0px !important;">
+                <div class="card-header" style="text-align: center;"><i class="icon ion-android-person" style="color: rgb(237,125,49); font-size: 100px;"></i></div>
+                <div class="card-body">
+                    <form asp-action="Login">
+                        <div class="form-group"><label class="small mb-1" asp-for="KorisnickoIme" for="inputEmailAddress"></label><input class="form-control py-4" id="inputEmailAddress" type="text" asp-for="KorisnickoIme" placeholder="Unesi korisničko ime" /></div>
+                        <div class="form-group"><label class="small mb-1" asp-for="Lozinka" for="inputPassword"></label><input class="form-control py-4" id="inputPassword" type="password" asp-for="Lozinka" placeholder="Unesi lozinku" /></div>
+                        <div class="form-group">
+                            <div class="custom-control custom-checkbox"><input class="custom-control-input" id="rememberPasswordCheck" type="checkbox" /><label class="custom-control-label" for="rememberPasswordCheck">Zapamti lozinku</label></div>
+                        </div>
+                        @if ((bool)ViewData["incorrectLogin"])
+                        {
+                            <p class="alert-danger">Pogresni podaci</p>
+                        }
+                        <div class="form-group d-flex align-items-center justify-content-between mt-4 mb-0"><input type="submit" value="Prijava" class="btn btn-primary" /></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

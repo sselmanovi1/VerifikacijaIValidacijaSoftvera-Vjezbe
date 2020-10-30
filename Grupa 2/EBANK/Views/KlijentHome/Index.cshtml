@@ -1,0 +1,110 @@
+﻿@model IEnumerable<EBANK.Models.Novost>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+@{
+  var bankomati = (List<Bankomat>) ViewData["bankomati"];
+  var filijale = (List<Filijala>) ViewData["filijale"];
+}
+
+
+<div class="text-center">
+    <div class="row" style="margin-top: 20px;">
+        <div class="col-sm-8" style="background: #ffffff9c; padding: 20px;">
+            <h1 class="display-6" style="margin-bottom: 20px;text-align: left;">Naše novosti:</h1>
+            @foreach (var item in Model)
+            {
+            <h5 class="row" style="text-align: left;">
+                @Html.DisplayFor(modelItem => item.Naslov)
+            </h5>
+            <dl class="row" style="text-align: left;">
+                @Html.DisplayFor(modelItem => item.Sadrzaj)
+            </dl>
+            }
+        </div>
+        <div class="col-sm-4">
+            <h1 class="display-6" style="margin-bottom: 60px; margin-top: 30px">Dobro došli, @ViewData["Ime"]!</h1>
+            <div class="card bg-warning text-white mb-4">
+                <a class="card-body" asp-controller="KlijentTransakcija" asp-action="Create" style="color: white;">Izvrši uplatu</a>
+            </div>
+            <div class="card bg-warning text-white mb-4">
+                <a class="card-body" asp-controller="KlijentZahtjevZaKredit" asp-action="Create" style="color: white;">Zahtjev za kredit</a>
+            </div>
+            <div class="card bg-warning text-white mb-4">
+                <a class="card-body" asp-controller="KlijentKonverzija" asp-action="Index" style="color: white;">Konverzija valuta</a>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <h4 style="margin-top: 30px;margin-bottom: 20px;">Mapa naših filijala i bankomata</h4>
+            <div id="map" style="height: 400px;"></div>
+        </div>
+    </div>
+
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=API_KEY&callback=initMap">
+    </script>
+
+    <script type="text/javascript">
+        function initMap() {
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 8,
+                center: new google.maps.LatLng(43.9593503, 18.129663),
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            });
+            var bankomati = [
+                @for(int i = 0; i < bankomati.Count; i++) {
+                    var item = bankomati[i];
+                    <text>["@item.Adresa.Naziv", @item.Adresa.Latitude, @item.Adresa.Longitude, @i]</text>
+                    if(i != bankomati.Count - 1) {
+                        <text>,</text>
+                    }
+                }
+            ];
+            var filijale = [
+                @for(int i = 0; i < filijale.Count; i++) {
+                    var item = filijale[i];
+                    <text>["@item.Adresa.Naziv", @item.Adresa.Latitude, @item.Adresa.Longitude, @i, "@item.BrojTelefona"]</text>
+                    if(i != filijale.Count - 1) {
+                        <text>,</text>
+                    }
+                }
+            ];
+
+            var infowindow = new google.maps.InfoWindow();
+
+            var marker, i;
+
+            for (i = 0; i < bankomati.length; i++) {
+                marker = new google.maps.Marker({
+                    position: new google.maps.LatLng(bankomati[i][1], bankomati[i][2]),
+                    map: map
+                });
+
+                google.maps.event.addListener(marker, 'click', (function (marker, i) {
+                    return function () {
+                        infowindow.setContent("Bankomat: " + bankomati[i][0]);
+                        infowindow.open(map, marker);
+                    }
+                })(marker, i));
+            }
+
+            for (i = 0; i < filijale.length; i++) {
+                marker = new google.maps.Marker({
+                    position: new google.maps.LatLng(filijale[i][1], filijale[i][2]),
+                    map: map
+                });
+
+                google.maps.event.addListener(marker, 'click', (function (marker, i) {
+                    return function () {
+                        infowindow.setContent("Filijala: " + filijale[i][0] + " (" + filijale[i][4] + ")");
+                        infowindow.open(map, marker);
+                    }
+                })(marker, i));
+            }
+        }
+    </script>
+</div>

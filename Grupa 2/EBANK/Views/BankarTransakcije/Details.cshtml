@@ -1,0 +1,53 @@
+﻿@model EBANK.Models.Transakcija
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Detalji o transakciji</h1>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            Sa računa:
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SaRacuna.Id)
+        </dd>
+        <dt class="col-sm-2">
+            Na račun:
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.NaRacun.Id)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Iznos)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Iznos) KM
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Vrijeme)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Vrijeme)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.VrstaTransakcije)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.VrstaTransakcije)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.NacinTransakcije)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.NacinTransakcije)
+        </dd>
+
+    </dl>
+</div>
+<div>
+    <a asp-action="Index">Povratak na listu</a>
+</div>

@@ -1,0 +1,53 @@
+﻿@model IEnumerable<EBANK.Models.Racun>
+
+@{
+    ViewData["Title"] = "Računi";
+}
+
+<h1>Računi</h1>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Klijent.Ime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Klijent.Prezime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StanjeRacuna)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VrstaRacuna)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Klijent.Ime)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Klijent.Prezime)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StanjeRacuna) KM
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.VrstaRacuna)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

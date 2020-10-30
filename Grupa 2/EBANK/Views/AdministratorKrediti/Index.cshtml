@@ -1,0 +1,61 @@
+﻿@model IEnumerable<EBANK.Models.Kredit>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Krediti</h1>
+
+<p>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.IsplaceniIznos)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PocetakOtplate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StatusKredita)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Iznos)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.KamatnaStopa)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RokOtplate)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsplaceniIznos) KM
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PocetakOtplate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StatusKredita)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Iznos) KM
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.KamatnaStopa)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RokOtplate)
+            </td>
+            <td>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
