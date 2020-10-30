@@ -1,0 +1,68 @@
+﻿body, html {
+    background: url('Images/backgroundMain.jpeg') no-repeat top left fixed #f0e9d6;
+    background-size: cover;
+    color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+}
+
+.courseSelection, .numberSelection {
+    align-items: center;
+    display: flex;
+    height: 40px;
+    margin-top: 1%;
+    margin-left: 1%;
+}
+
+input[type="text"] {
+    font-size: 35px;
+    text-align: center;
+    margin-left: 17px;
+}
+
+input[type='radio'] {
+    transform: scale(2);
+}
+
+.dayTimeCourseLabels {
+    align-items: center;
+    display: flex;
+    height: 40px;
+    margin-top: 4%;
+}
+
+.Row {
+    display: table;
+    width: 100%; /*Optional*/
+    table-layout: fixed; /*Optional*/
+    border-spacing: 10px; /*Optional*/
+}
+
+.Column {
+    display: table-cell;
+    background-color: red; /*Optional*/
+}
+/*
+.nextDiv {
+   
+    align-items: center;
+    display: flex;
+    height: 40px;
+    margin-top:60%;
+    margin-left:50%
+}
+
+.btnNext {
+    display: flex;
+    height: 40px;
+    align-items:end;
+}
+*/
+    /* <div class="nextDiv">
+                    <asp:Label ID="numberOfFinishedLabel" runat="server" Text="m/n" 
+                        Height="35px" Font-Bold="True" Font-Names="Times New Roman" Font-Size="40px" ></asp:Label>
+                </div>
+                <div class ="nextBtnDiv">
+                    <asp:Button ID="btnNext" runat="server" Text="Next" Height="41px" 
+                    Width="101px" Font-Bold="True" Font-Names="Times New Roman" Font-Size="30px" OnClick="btnNext_Click"/>
+                </div> */
