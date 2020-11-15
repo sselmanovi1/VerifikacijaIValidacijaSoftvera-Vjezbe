@@ -1,0 +1,18 @@
+C:\Users\Ehlimana\Desktop\r\4\IMDB\IMDB\bin\Debug\netcoreapp3.1\IMDB.deps.json
+C:\Users\Ehlimana\Desktop\r\4\IMDB\IMDB\bin\Debug\netcoreapp3.1\IMDB.dll
+C:\Users\Ehlimana\Desktop\r\4\IMDB\IMDB\bin\Debug\netcoreapp3.1\IMDB.pdb
+C:\Users\Ehlimana\Desktop\r\4\IMDB\IMDB\obj\Debug\netcoreapp3.1\IMDB.csprojAssemblyReference.cache
+C:\Users\Ehlimana\Desktop\r\4\IMDB\IMDB\obj\Debug\netcoreapp3.1\IMDB.AssemblyInfoInputs.cache
+C:\Users\Ehlimana\Desktop\r\4\IMDB\IMDB\obj\Debug\netcoreapp3.1\IMDB.AssemblyInfo.cs
+C:\Users\Ehlimana\Desktop\r\4\IMDB\IMDB\obj\Debug\netcoreapp3.1\IMDB.csproj.CoreCompileInputs.cache
+C:\Users\Ehlimana\Desktop\r\4\IMDB\IMDB\obj\Debug\netcoreapp3.1\IMDB.dll
+C:\Users\Ehlimana\Desktop\r\4\IMDB\IMDB\obj\Debug\netcoreapp3.1\IMDB.pdb
+D:\D\Ehlimana\Documents\VVS\Zadaća br. 2 (Unit Testiranje)\Grupa 4\IMDB\IMDB\bin\Debug\netcoreapp3.1\IMDB.deps.json
+D:\D\Ehlimana\Documents\VVS\Zadaća br. 2 (Unit Testiranje)\Grupa 4\IMDB\IMDB\bin\Debug\netcoreapp3.1\IMDB.dll
+D:\D\Ehlimana\Documents\VVS\Zadaća br. 2 (Unit Testiranje)\Grupa 4\IMDB\IMDB\bin\Debug\netcoreapp3.1\IMDB.pdb
+D:\D\Ehlimana\Documents\VVS\Zadaća br. 2 (Unit Testiranje)\Grupa 4\IMDB\IMDB\obj\Debug\netcoreapp3.1\IMDB.csprojAssemblyReference.cache
+D:\D\Ehlimana\Documents\VVS\Zadaća br. 2 (Unit Testiranje)\Grupa 4\IMDB\IMDB\obj\Debug\netcoreapp3.1\IMDB.AssemblyInfoInputs.cache
+D:\D\Ehlimana\Documents\VVS\Zadaća br. 2 (Unit Testiranje)\Grupa 4\IMDB\IMDB\obj\Debug\netcoreapp3.1\IMDB.AssemblyInfo.cs
+D:\D\Ehlimana\Documents\VVS\Zadaća br. 2 (Unit Testiranje)\Grupa 4\IMDB\IMDB\obj\Debug\netcoreapp3.1\IMDB.csproj.CoreCompileInputs.cache
+D:\D\Ehlimana\Documents\VVS\Zadaća br. 2 (Unit Testiranje)\Grupa 4\IMDB\IMDB\obj\Debug\netcoreapp3.1\IMDB.dll
+D:\D\Ehlimana\Documents\VVS\Zadaća br. 2 (Unit Testiranje)\Grupa 4\IMDB\IMDB\obj\Debug\netcoreapp3.1\IMDB.pdb
