@@ -1,0 +1,9 @@
+D:\D\Ehlimana\Documents\VVS\Zadaća br. 2 (Unit Testiranje)\Grupa 7\Parking Lot\Parking Lot\bin\Debug\netcoreapp3.1\Parking Lot.deps.json
+D:\D\Ehlimana\Documents\VVS\Zadaća br. 2 (Unit Testiranje)\Grupa 7\Parking Lot\Parking Lot\bin\Debug\netcoreapp3.1\Parking Lot.dll
+D:\D\Ehlimana\Documents\VVS\Zadaća br. 2 (Unit Testiranje)\Grupa 7\Parking Lot\Parking Lot\bin\Debug\netcoreapp3.1\Parking Lot.pdb
+D:\D\Ehlimana\Documents\VVS\Zadaća br. 2 (Unit Testiranje)\Grupa 7\Parking Lot\Parking Lot\obj\Debug\netcoreapp3.1\Parking Lot.csprojAssemblyReference.cache
+D:\D\Ehlimana\Documents\VVS\Zadaća br. 2 (Unit Testiranje)\Grupa 7\Parking Lot\Parking Lot\obj\Debug\netcoreapp3.1\Parking Lot.AssemblyInfoInputs.cache
+D:\D\Ehlimana\Documents\VVS\Zadaća br. 2 (Unit Testiranje)\Grupa 7\Parking Lot\Parking Lot\obj\Debug\netcoreapp3.1\Parking Lot.AssemblyInfo.cs
+D:\D\Ehlimana\Documents\VVS\Zadaća br. 2 (Unit Testiranje)\Grupa 7\Parking Lot\Parking Lot\obj\Debug\netcoreapp3.1\Parking Lot.csproj.CoreCompileInputs.cache
+D:\D\Ehlimana\Documents\VVS\Zadaća br. 2 (Unit Testiranje)\Grupa 7\Parking Lot\Parking Lot\obj\Debug\netcoreapp3.1\Parking Lot.dll
+D:\D\Ehlimana\Documents\VVS\Zadaća br. 2 (Unit Testiranje)\Grupa 7\Parking Lot\Parking Lot\obj\Debug\netcoreapp3.1\Parking Lot.pdb
