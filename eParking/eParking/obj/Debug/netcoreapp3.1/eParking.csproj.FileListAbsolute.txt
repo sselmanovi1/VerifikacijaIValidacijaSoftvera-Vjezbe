@@ -1,0 +1,18 @@
+C:\Users\Ehlimana\Desktop\r\3\eParking\eParking\bin\Debug\netcoreapp3.1\eParking.deps.json
+C:\Users\Ehlimana\Desktop\r\3\eParking\eParking\bin\Debug\netcoreapp3.1\eParking.dll
+C:\Users\Ehlimana\Desktop\r\3\eParking\eParking\bin\Debug\netcoreapp3.1\eParking.pdb
+C:\Users\Ehlimana\Desktop\r\3\eParking\eParking\obj\Debug\netcoreapp3.1\eParking.csprojAssemblyReference.cache
+C:\Users\Ehlimana\Desktop\r\3\eParking\eParking\obj\Debug\netcoreapp3.1\eParking.AssemblyInfoInputs.cache
+C:\Users\Ehlimana\Desktop\r\3\eParking\eParking\obj\Debug\netcoreapp3.1\eParking.AssemblyInfo.cs
+C:\Users\Ehlimana\Desktop\r\3\eParking\eParking\obj\Debug\netcoreapp3.1\eParking.csproj.CoreCompileInputs.cache
+C:\Users\Ehlimana\Desktop\r\3\eParking\eParking\obj\Debug\netcoreapp3.1\eParking.dll
+C:\Users\Ehlimana\Desktop\r\3\eParking\eParking\obj\Debug\netcoreapp3.1\eParking.pdb
+D:\D\Ehlimana\Documents\VVS\Zadaća br. 2 (Unit Testiranje)\Grupa 3\eParking\eParking\bin\Debug\netcoreapp3.1\eParking.deps.json
+D:\D\Ehlimana\Documents\VVS\Zadaća br. 2 (Unit Testiranje)\Grupa 3\eParking\eParking\bin\Debug\netcoreapp3.1\eParking.dll
+D:\D\Ehlimana\Documents\VVS\Zadaća br. 2 (Unit Testiranje)\Grupa 3\eParking\eParking\bin\Debug\netcoreapp3.1\eParking.pdb
+D:\D\Ehlimana\Documents\VVS\Zadaća br. 2 (Unit Testiranje)\Grupa 3\eParking\eParking\obj\Debug\netcoreapp3.1\eParking.csprojAssemblyReference.cache
+D:\D\Ehlimana\Documents\VVS\Zadaća br. 2 (Unit Testiranje)\Grupa 3\eParking\eParking\obj\Debug\netcoreapp3.1\eParking.AssemblyInfoInputs.cache
+D:\D\Ehlimana\Documents\VVS\Zadaća br. 2 (Unit Testiranje)\Grupa 3\eParking\eParking\obj\Debug\netcoreapp3.1\eParking.AssemblyInfo.cs
+D:\D\Ehlimana\Documents\VVS\Zadaća br. 2 (Unit Testiranje)\Grupa 3\eParking\eParking\obj\Debug\netcoreapp3.1\eParking.csproj.CoreCompileInputs.cache
+D:\D\Ehlimana\Documents\VVS\Zadaća br. 2 (Unit Testiranje)\Grupa 3\eParking\eParking\obj\Debug\netcoreapp3.1\eParking.dll
+D:\D\Ehlimana\Documents\VVS\Zadaća br. 2 (Unit Testiranje)\Grupa 3\eParking\eParking\obj\Debug\netcoreapp3.1\eParking.pdb
