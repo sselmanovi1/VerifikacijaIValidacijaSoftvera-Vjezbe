@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30621.155
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EBank", "EBank\EBank.csproj", "{007C425B-9D5F-43BC-A489-35E600629111}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unit Testovi", "Unit Testovi\Unit Testovi.csproj", "{C92691A0-4C3C-4677-B5E1-276AE0C1B0B2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{007C425B-9D5F-43BC-A489-35E600629111}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{007C425B-9D5F-43BC-A489-35E600629111}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{007C425B-9D5F-43BC-A489-35E600629111}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{007C425B-9D5F-43BC-A489-35E600629111}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C92691A0-4C3C-4677-B5E1-276AE0C1B0B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C92691A0-4C3C-4677-B5E1-276AE0C1B0B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C92691A0-4C3C-4677-B5E1-276AE0C1B0B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C92691A0-4C3C-4677-B5E1-276AE0C1B0B2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {183E9DFA-4EEC-4B5A-9DB3-560CF180EEBB}
+	EndGlobalSection
+EndGlobal

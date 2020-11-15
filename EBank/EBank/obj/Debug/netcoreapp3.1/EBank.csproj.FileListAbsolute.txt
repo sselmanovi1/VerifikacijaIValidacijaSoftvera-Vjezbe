@@ -1,0 +1,18 @@
+C:\Users\Ehlimana\Desktop\r\2\EBank\EBank\bin\Debug\netcoreapp3.1\EBank.deps.json
+C:\Users\Ehlimana\Desktop\r\2\EBank\EBank\bin\Debug\netcoreapp3.1\EBank.dll
+C:\Users\Ehlimana\Desktop\r\2\EBank\EBank\bin\Debug\netcoreapp3.1\EBank.pdb
+C:\Users\Ehlimana\Desktop\r\2\EBank\EBank\obj\Debug\netcoreapp3.1\EBank.csprojAssemblyReference.cache
+C:\Users\Ehlimana\Desktop\r\2\EBank\EBank\obj\Debug\netcoreapp3.1\EBank.AssemblyInfoInputs.cache
+C:\Users\Ehlimana\Desktop\r\2\EBank\EBank\obj\Debug\netcoreapp3.1\EBank.AssemblyInfo.cs
+C:\Users\Ehlimana\Desktop\r\2\EBank\EBank\obj\Debug\netcoreapp3.1\EBank.csproj.CoreCompileInputs.cache
+C:\Users\Ehlimana\Desktop\r\2\EBank\EBank\obj\Debug\netcoreapp3.1\EBank.dll
+C:\Users\Ehlimana\Desktop\r\2\EBank\EBank\obj\Debug\netcoreapp3.1\EBank.pdb
+D:\D\Ehlimana\Documents\VVS\Zadaća br. 2 (Unit Testiranje)\Grupa 2\EBank\EBank\bin\Debug\netcoreapp3.1\EBank.deps.json
+D:\D\Ehlimana\Documents\VVS\Zadaća br. 2 (Unit Testiranje)\Grupa 2\EBank\EBank\bin\Debug\netcoreapp3.1\EBank.dll
+D:\D\Ehlimana\Documents\VVS\Zadaća br. 2 (Unit Testiranje)\Grupa 2\EBank\EBank\bin\Debug\netcoreapp3.1\EBank.pdb
+D:\D\Ehlimana\Documents\VVS\Zadaća br. 2 (Unit Testiranje)\Grupa 2\EBank\EBank\obj\Debug\netcoreapp3.1\EBank.csprojAssemblyReference.cache
+D:\D\Ehlimana\Documents\VVS\Zadaća br. 2 (Unit Testiranje)\Grupa 2\EBank\EBank\obj\Debug\netcoreapp3.1\EBank.AssemblyInfoInputs.cache
+D:\D\Ehlimana\Documents\VVS\Zadaća br. 2 (Unit Testiranje)\Grupa 2\EBank\EBank\obj\Debug\netcoreapp3.1\EBank.AssemblyInfo.cs
+D:\D\Ehlimana\Documents\VVS\Zadaća br. 2 (Unit Testiranje)\Grupa 2\EBank\EBank\obj\Debug\netcoreapp3.1\EBank.csproj.CoreCompileInputs.cache
+D:\D\Ehlimana\Documents\VVS\Zadaća br. 2 (Unit Testiranje)\Grupa 2\EBank\EBank\obj\Debug\netcoreapp3.1\EBank.dll
+D:\D\Ehlimana\Documents\VVS\Zadaća br. 2 (Unit Testiranje)\Grupa 2\EBank\EBank\obj\Debug\netcoreapp3.1\EBank.pdb
