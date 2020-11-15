@@ -1,0 +1,17 @@
+C:\Users\Ehlimana\Desktop\r\rs2\Domari\Domari\bin\Debug\netcoreapp3.1\Domari.deps.json
+C:\Users\Ehlimana\Desktop\r\rs2\Domari\Domari\bin\Debug\netcoreapp3.1\Domari.dll
+C:\Users\Ehlimana\Desktop\r\rs2\Domari\Domari\bin\Debug\netcoreapp3.1\Domari.pdb
+C:\Users\Ehlimana\Desktop\r\rs2\Domari\Domari\obj\Debug\netcoreapp3.1\Domari.AssemblyInfoInputs.cache
+C:\Users\Ehlimana\Desktop\r\rs2\Domari\Domari\obj\Debug\netcoreapp3.1\Domari.AssemblyInfo.cs
+C:\Users\Ehlimana\Desktop\r\rs2\Domari\Domari\obj\Debug\netcoreapp3.1\Domari.csproj.CoreCompileInputs.cache
+C:\Users\Ehlimana\Desktop\r\rs2\Domari\Domari\obj\Debug\netcoreapp3.1\Domari.dll
+C:\Users\Ehlimana\Desktop\r\rs2\Domari\Domari\obj\Debug\netcoreapp3.1\Domari.pdb
+D:\D\Ehlimana\Documents\VVS\Zadaća br. 2 (Unit Testiranje)\Grupa RS-2\Domari\Domari\bin\Debug\netcoreapp3.1\Domari.deps.json
+D:\D\Ehlimana\Documents\VVS\Zadaća br. 2 (Unit Testiranje)\Grupa RS-2\Domari\Domari\bin\Debug\netcoreapp3.1\Domari.dll
+D:\D\Ehlimana\Documents\VVS\Zadaća br. 2 (Unit Testiranje)\Grupa RS-2\Domari\Domari\bin\Debug\netcoreapp3.1\Domari.pdb
+D:\D\Ehlimana\Documents\VVS\Zadaća br. 2 (Unit Testiranje)\Grupa RS-2\Domari\Domari\obj\Debug\netcoreapp3.1\Domari.csprojAssemblyReference.cache
+D:\D\Ehlimana\Documents\VVS\Zadaća br. 2 (Unit Testiranje)\Grupa RS-2\Domari\Domari\obj\Debug\netcoreapp3.1\Domari.AssemblyInfoInputs.cache
+D:\D\Ehlimana\Documents\VVS\Zadaća br. 2 (Unit Testiranje)\Grupa RS-2\Domari\Domari\obj\Debug\netcoreapp3.1\Domari.AssemblyInfo.cs
+D:\D\Ehlimana\Documents\VVS\Zadaća br. 2 (Unit Testiranje)\Grupa RS-2\Domari\Domari\obj\Debug\netcoreapp3.1\Domari.csproj.CoreCompileInputs.cache
+D:\D\Ehlimana\Documents\VVS\Zadaća br. 2 (Unit Testiranje)\Grupa RS-2\Domari\Domari\obj\Debug\netcoreapp3.1\Domari.dll
+D:\D\Ehlimana\Documents\VVS\Zadaća br. 2 (Unit Testiranje)\Grupa RS-2\Domari\Domari\obj\Debug\netcoreapp3.1\Domari.pdb
