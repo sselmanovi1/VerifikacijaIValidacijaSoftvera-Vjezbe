@@ -1,0 +1,9 @@
+D:\D\Ehlimana\Documents\VVS\Zadaća br. 2 (Unit Testiranje)\Grupa 1\Studentski Dom\Studentski Dom\bin\Debug\netcoreapp3.1\Studentski Dom.deps.json
+D:\D\Ehlimana\Documents\VVS\Zadaća br. 2 (Unit Testiranje)\Grupa 1\Studentski Dom\Studentski Dom\bin\Debug\netcoreapp3.1\Studentski Dom.dll
+D:\D\Ehlimana\Documents\VVS\Zadaća br. 2 (Unit Testiranje)\Grupa 1\Studentski Dom\Studentski Dom\bin\Debug\netcoreapp3.1\Studentski Dom.pdb
+D:\D\Ehlimana\Documents\VVS\Zadaća br. 2 (Unit Testiranje)\Grupa 1\Studentski Dom\Studentski Dom\obj\Debug\netcoreapp3.1\Studentski Dom.csprojAssemblyReference.cache
+D:\D\Ehlimana\Documents\VVS\Zadaća br. 2 (Unit Testiranje)\Grupa 1\Studentski Dom\Studentski Dom\obj\Debug\netcoreapp3.1\Studentski Dom.AssemblyInfoInputs.cache
+D:\D\Ehlimana\Documents\VVS\Zadaća br. 2 (Unit Testiranje)\Grupa 1\Studentski Dom\Studentski Dom\obj\Debug\netcoreapp3.1\Studentski Dom.AssemblyInfo.cs
+D:\D\Ehlimana\Documents\VVS\Zadaća br. 2 (Unit Testiranje)\Grupa 1\Studentski Dom\Studentski Dom\obj\Debug\netcoreapp3.1\Studentski Dom.csproj.CoreCompileInputs.cache
+D:\D\Ehlimana\Documents\VVS\Zadaća br. 2 (Unit Testiranje)\Grupa 1\Studentski Dom\Studentski Dom\obj\Debug\netcoreapp3.1\Studentski Dom.dll
+D:\D\Ehlimana\Documents\VVS\Zadaća br. 2 (Unit Testiranje)\Grupa 1\Studentski Dom\Studentski Dom\obj\Debug\netcoreapp3.1\Studentski Dom.pdb
