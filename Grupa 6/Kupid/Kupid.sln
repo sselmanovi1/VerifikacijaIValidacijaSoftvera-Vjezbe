@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30621.155
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kupid", "Kupid\Kupid.csproj", "{3415C2B4-ED04-403C-A971-1DDBF93CB49D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3415C2B4-ED04-403C-A971-1DDBF93CB49D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3415C2B4-ED04-403C-A971-1DDBF93CB49D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3415C2B4-ED04-403C-A971-1DDBF93CB49D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3415C2B4-ED04-403C-A971-1DDBF93CB49D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {375E8296-EF5B-4FC8-A111-4F67E544E739}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,9 @@
+C:\Users\Ehlimana\Desktop\r\6\Kupid\Kupid\bin\Debug\netcoreapp3.1\Kupid.deps.json
+C:\Users\Ehlimana\Desktop\r\6\Kupid\Kupid\bin\Debug\netcoreapp3.1\Kupid.dll
+C:\Users\Ehlimana\Desktop\r\6\Kupid\Kupid\bin\Debug\netcoreapp3.1\Kupid.pdb
+C:\Users\Ehlimana\Desktop\r\6\Kupid\Kupid\obj\Debug\netcoreapp3.1\Kupid.csprojAssemblyReference.cache
+C:\Users\Ehlimana\Desktop\r\6\Kupid\Kupid\obj\Debug\netcoreapp3.1\Kupid.AssemblyInfoInputs.cache
+C:\Users\Ehlimana\Desktop\r\6\Kupid\Kupid\obj\Debug\netcoreapp3.1\Kupid.AssemblyInfo.cs
+C:\Users\Ehlimana\Desktop\r\6\Kupid\Kupid\obj\Debug\netcoreapp3.1\Kupid.csproj.CoreCompileInputs.cache
+C:\Users\Ehlimana\Desktop\r\6\Kupid\Kupid\obj\Debug\netcoreapp3.1\Kupid.dll
+C:\Users\Ehlimana\Desktop\r\6\Kupid\Kupid\obj\Debug\netcoreapp3.1\Kupid.pdb
