@@ -1,0 +1,9 @@
+C:\Users\Ehlimana\Desktop\r\rs1\Filmoteka\Filmoteka\bin\Debug\netcoreapp3.1\Filmoteka.deps.json
+C:\Users\Ehlimana\Desktop\r\rs1\Filmoteka\Filmoteka\bin\Debug\netcoreapp3.1\Filmoteka.dll
+C:\Users\Ehlimana\Desktop\r\rs1\Filmoteka\Filmoteka\bin\Debug\netcoreapp3.1\Filmoteka.pdb
+C:\Users\Ehlimana\Desktop\r\rs1\Filmoteka\Filmoteka\obj\Debug\netcoreapp3.1\Filmoteka.AssemblyInfoInputs.cache
+C:\Users\Ehlimana\Desktop\r\rs1\Filmoteka\Filmoteka\obj\Debug\netcoreapp3.1\Filmoteka.AssemblyInfo.cs
+C:\Users\Ehlimana\Desktop\r\rs1\Filmoteka\Filmoteka\obj\Debug\netcoreapp3.1\Filmoteka.csproj.CoreCompileInputs.cache
+C:\Users\Ehlimana\Desktop\r\rs1\Filmoteka\Filmoteka\obj\Debug\netcoreapp3.1\Filmoteka.dll
+C:\Users\Ehlimana\Desktop\r\rs1\Filmoteka\Filmoteka\obj\Debug\netcoreapp3.1\Filmoteka.pdb
+C:\Users\Ehlimana\Desktop\r\rs1\Filmoteka\Filmoteka\obj\Debug\netcoreapp3.1\Filmoteka.csprojAssemblyReference.cache
