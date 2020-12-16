@@ -54,27 +54,29 @@ namespace Priprema_za_Zadaću_3
     }
 
 
-    public class NumberCollectionRefactored
+public class NumberCollectionRefactored
+{
+    protected List<int> numbers = new List<int>();
+    string mode;
+
+    public int returnNumber(int index)
     {
-        protected List<int> numbers = new List<int>();
-        public Tuple<int, string> returnNumber(int index)
+        return numbers.ElementAt(index);
+    }
+
+    public void changeMode(string newMode)
+    {
+        mode = newMode;
+    }
+
+    public virtual void addNumber(int number)
+    {
+        if (mode == "Positive" && number > 0 ||
+            mode == "Small Positive" && number > 0 && number < 10 ||
+            mode == "Even Small Positive" && number > 0 && number < 10 && number % 2 == 0)
         {
-            string info = "";
-
-            if (numbers.ElementAt(index) > 0 && numbers.ElementAt(index) < 10 && numbers.ElementAt(index) % 2 == 0)
-            {
-                info = "Even Small Positive Number";
-            }
-            else if (numbers.ElementAt(index) > 0 && numbers.ElementAt(index) < 10)
-            {
-                info = "Small Positive Number";
-            }
-            else if (numbers.ElementAt(index) > 0)
-            {
-                info = "Positive Number";
-            }
-
-            return new Tuple<int, string>(numbers.ElementAt(index), info);
+            numbers.Add(number);
         }
     }
+}
 }

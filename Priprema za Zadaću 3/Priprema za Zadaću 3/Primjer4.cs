@@ -5,39 +5,38 @@ using System.Text;
 
 namespace Priprema_za_Zadaću_3
 {
-    public class Kino
+public class Kino
+{
+    double cijenaKarte;
 
+    public double obracunajCijenu(DateTime vrijemeProjekcije, bool student, string vrstaProjekcije)
     {
+        // srijeda - cijena 4 KM za sve
+        if (vrijemeProjekcije.DayOfWeek.ToString() == "Wednesday")
+            cijenaKarte = 4;
 
-        double cijenaKarte;
+        // ponedjeljak - cijena 4 KM za studente
+        else if (vrijemeProjekcije.DayOfWeek.ToString() == "Monday" && student)
+            cijenaKarte = 4;
 
-        public double obracunajCijenu(DateTime vrijemeProjekcije, bool student, string vrstaProjekcije)
-
+        // ostali dani - cijena ovisi o vremenu projekcije
+        else
         {
-
-            if (vrijemeProjekcije.DayOfWeek.ToString() == "Wednesday")
-                cijenaKarte = 4;
-
-            else if (vrijemeProjekcije.DayOfWeek.ToString() == "Monday")
-
-            {
-                if (student) cijenaKarte = 4;
-
-            }
-            else
-            {
-
-                if (vrijemeProjekcije.Hour < 15) cijenaKarte = 5;
-
-                else if (vrijemeProjekcije.Hour < 19) cijenaKarte = 6; else cijenaKarte = 7;
-            }
-
-            if (vrstaProjekcije == "3D") cijenaKarte += 1.5;
-
-            return cijenaKarte;
+            if (vrijemeProjekcije.Hour < 15) 
+                cijenaKarte = 5;
+            else if (vrijemeProjekcije.Hour < 19) 
+                cijenaKarte = 6;
+            else 
+                cijenaKarte = 7;
         }
 
+        // dodatno plaćanje za 3D projekcije
+        if (vrstaProjekcije == "3D") 
+            cijenaKarte += 1.5;
+
+        return cijenaKarte;
     }
+}
 
     [TestClass]
     public class Primjer4

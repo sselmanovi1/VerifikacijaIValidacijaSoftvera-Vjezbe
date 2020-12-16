@@ -1,4 +1,5 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Collections.Generic;
 
 namespace Priprema_za_Zadaću_3
 {
@@ -19,6 +20,7 @@ namespace Priprema_za_Zadaću_3
         {
             return day.getNumber();
         }
+
     }
 
     public interface IDay
@@ -40,7 +42,7 @@ namespace Priprema_za_Zadaću_3
         string name = "Tuesday";
         public int getNumber()
         {
-            return 1;
+            return 2;
         }
     }
 
@@ -49,7 +51,7 @@ namespace Priprema_za_Zadaću_3
         string name = "Wednesday";
         public int getNumber()
         {
-            return 1;
+            return 3;
         }
     }
 
@@ -58,7 +60,7 @@ namespace Priprema_za_Zadaću_3
         string name = "Thursday";
         public int getNumber()
         {
-            return 1;
+            return 4;
         }
     }
 
@@ -67,7 +69,7 @@ namespace Priprema_za_Zadaću_3
         string name = "Friday";
         public int getNumber()
         {
-            return 1;
+            return 5;
         }
     }
 
@@ -76,7 +78,7 @@ namespace Priprema_za_Zadaću_3
         string name = "Saturday";
         public int getNumber()
         {
-            return 1;
+            return 6;
         }
     }
 

@@ -32,12 +32,11 @@ namespace Priprema_za_Zadaću_3
             Zaposlenik privremeni = null;
             for (int i = 0; i < Uposlenici.Count; i++)
             {
-                if (Uposlenici[i].Plata > (DateTime.Now.Year - Uposlenici[i].DatumRodenja.Year - 18) * 300)
+                if (Uposlenici[i].Plata < (DateTime.Now.Year - Uposlenici[i].DatumRodenja.Year - 18) * 300)
                     continue;
 
                 if (Uposlenici[i].Ime.Contains(naziv) || Uposlenici[i].Prezime.Contains(naziv)
                     || Uposlenici[i].DatumRodenja.ToString().Contains(naziv))
-                    if (privremeni != Uposlenici[i])
                         privremeni = Uposlenici[i];
             }
             if (privremeni == null)
@@ -50,7 +49,7 @@ namespace Priprema_za_Zadaću_3
         {
             for (int i = 0; i < Uposlenici.Count; i++)
             {
-                if (Uposlenici[i].Plata > (DateTime.Now.Year - Uposlenici[i].DatumRodenja.Year - 18) * 300)
+                if (Uposlenici[i].Plata < (DateTime.Now.Year - Uposlenici[i].DatumRodenja.Year - 18) * 300)
                     continue;
 
                 if (Uposlenici[i].Ime.Contains(naziv) || Uposlenici[i].Prezime.Contains(naziv)
@@ -69,7 +68,7 @@ namespace Priprema_za_Zadaću_3
                 int godineOdPunoljetstva = DateTime.Now.Year - Uposlenici[i].DatumRodenja.Year - 18;
                 int gornjaGranicaPlate = godineOdPunoljetstva * 300;
 
-                if (Uposlenici[i].Plata > gornjaGranicaPlate)
+                if (Uposlenici[i].Plata < gornjaGranicaPlate)
                     continue;
 
                 bool pronadenoIme = Uposlenici[i].Ime.Contains(naziv),
@@ -92,13 +91,13 @@ namespace Priprema_za_Zadaću_3
                 int plata3 = (DateTime.Now.Year - Uposlenici[i + 2].DatumRodenja.Year - 18) * 300;
                 int plata4 = (DateTime.Now.Year - Uposlenici[i + 3].DatumRodenja.Year - 18) * 300;
                 int indeksOk = -1;
-                if (Uposlenici[i].Plata < plata1)
+                if (Uposlenici[i].Plata > plata1)
                     indeksOk = i;
-                else if (Uposlenici[i + 1].Plata < plata2)
+                else if (Uposlenici[i + 1].Plata > plata2)
                     indeksOk = i + 1;
-                else if (Uposlenici[i + 2].Plata < plata3)
+                else if (Uposlenici[i + 2].Plata > plata3)
                     indeksOk = i + 2;
-                else if (Uposlenici[i + 3].Plata < plata4)
+                else if (Uposlenici[i + 3].Plata > plata4)
                     indeksOk = i + 3;
 
                 if (indeksOk == -1)
@@ -137,13 +136,13 @@ namespace Priprema_za_Zadaću_3
                 }
 
                 int indeksOk = -1;
-                if (Uposlenici[i].Plata < plata11)
+                if (Uposlenici[i].Plata > plata11)
                     indeksOk = i;
-                else if (Uposlenici[i + 1].Plata < plata22)
+                else if (Uposlenici[i + 1].Plata > plata22)
                     indeksOk = i + 1;
-                else if (Uposlenici[i + 2].Plata < plata33)
+                else if (Uposlenici[i + 2].Plata > plata33)
                     indeksOk = i + 2;
-                else if (Uposlenici[i + 3].Plata < plata44)
+                else if (Uposlenici[i + 3].Plata > plata44)
                     indeksOk = i + 3;
                 if (indeksOk == -1)
                     continue;
@@ -169,7 +168,7 @@ namespace Priprema_za_Zadaću_3
         {
             Primjer5 klasa = new Primjer5();
             for (int i = 0; i < 1000000; i++)
-                klasa.Uposlenici.Add(new Zaposlenik("Ime" + i, "Prezime", DateTime.Now.AddMonths(-18 * 12), 2000);
+                klasa.Uposlenici.Add(new Zaposlenik("Ime" + i, "Prezime", DateTime.Now.AddMonths(-18 * 12), 20 * 300));
 
             // prvi breakpoint - prije poziva metode
             int x = 0;
@@ -179,6 +178,8 @@ namespace Priprema_za_Zadaću_3
 
             // drugi breakpoint - nakon poziva metode
             int y = 0;
+
+            Assert.IsTrue(true);
         }
     }
 }
