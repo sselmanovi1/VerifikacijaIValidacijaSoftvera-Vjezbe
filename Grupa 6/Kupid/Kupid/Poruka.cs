@@ -61,15 +61,23 @@ namespace Kupid
         /// <returns></returns>
         public double IzračunajKompatibilnostKorisnika()
         {
-            if (c is GrupniChat)
-                throw new InvalidOperationException("Grupni chatovi nisu podržani!");
+            double kompatibilnost = 0;
+            bool[] iste = new bool[4];
+            if (Primalac.Lokacija == Posiljalac.Lokacija)
+                iste[0] = true;
+            if (Primalac.Godine == Posiljalac.Godine)
+                iste[1] = true;
+            if (Primalac.ZeljeniMinGodina == Posiljalac.ZeljeniMinGodina)
+                iste[2] = true;
+            if (Primalac.ZeljeniMaxGodina == Posiljalac.ZeljeniMaxGodina)
+                iste[3] = true;
 
-            if (c.Poruke.Find(poruka => poruka.IzračunajKompatibilnostKorisnika() == 100) != null
-                && r.DajUtisak() == "Pozitivan")
-                return true;
 
-            return false;
+            return 100;
+
+
+
 
             #endregion
-        
-    }
+
+        }
