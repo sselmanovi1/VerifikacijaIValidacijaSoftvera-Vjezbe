@@ -131,8 +131,8 @@ namespace Kupid
                 && r.DajUtisak() == "Pozitivan")
                 return true;
 
-            else
-                return false;
+            return false;
+
         }
 
         public void SpajanjeKorisnika()
