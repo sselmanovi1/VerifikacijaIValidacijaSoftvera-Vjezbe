@@ -138,13 +138,15 @@ namespace Kupid
         public void SpajanjeKorisnika()
         {
             bool stvorenRazgovor = false;
-            foreach(Korisnik prvi in korisnici)
+            foreach (Korisnik prvi in korisnici)
             {
-                foreach(Korisnik drugi in korisnici)
+                foreach (Korisnik drugi in korisnici)
                 {
+                    Chat razgovorIzmeduPrvogIDrugogKorisnika = razgovori.Find(r => r.Korisnici.Find(k => k.Ime == prvi.Ime) != null && r.Korisnici.Find(k => k.Ime == drugi.Ime) != null);
+
                     if (prvi.Ime == drugi.Ime)
                         continue;
-                    if (razgovori.Find(r => r.Korisnici.Find(k => k.Ime == prvi.Ime) != null && r.Korisnici.Find(k => k.Ime == drugi.Ime) != null) != null)
+                    if (razgovorIzmeduPrvogIDrugogKorisnika != null)
                         continue;
 
                     if (prvi.Lokacija == drugi.ZeljenaLokacija || prvi.ZeljenaLokacija == drugi.Lokacija
@@ -159,7 +161,6 @@ namespace Kupid
             if (!stvorenRazgovor)
                 throw new ArgumentException("Nemoguće spojiti korisnike!");
         }
-
-        #endregion
-    }
+            #endregion
+        }
 }
